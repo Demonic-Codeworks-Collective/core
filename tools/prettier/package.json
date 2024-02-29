@@ -1,0 +1,46 @@
+{
+  "name": "@demonicattack/prettier",
+  "version": "0.0.1",
+  "description": "prettier config",
+  "keywords": [
+    "prettier"
+  ],
+  "homepage": "https://github.com/Demonic-Attack/core",
+  "bugs": {
+    "url": "https://github.com/Demonic-Attack/core/issues"
+  },
+  "repository": {
+    "url": "https://github.com/Demonic-Attack/core"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Demonic Attack",
+    "url": "https://github.com/demonicattack"
+  },
+  "type": "module",
+  "main": "index.mjs",
+  "files": [
+    "prettier.config.mjs"
+  ],
+  "scripts": {
+    "format": "prettier -w \"**/*.{mjs,js,json}\""
+  },
+  "lint-staged": {
+    "*.{mjs,js,json}": "prettier -w"
+  },
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-multiline-arrays": "^3.0.4",
+    "prettier-plugin-prisma": "^5.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  },
+  "peerDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-multiline-arrays": "^3.0.4",
+    "prettier-plugin-prisma": "^5.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,20 +1,48 @@
 {
-  "name": "core",
+  "name": "@demonicattack/core",
+  "version": "0.0.1",
   "private": true,
+  "description": "Core tools for Demonic Attack",
+  "keywords": [
+    "prettier",
+    "eslint",
+    "tsconfig"
+  ],
+  "homepage": "https://github.com/Demonic-Attack/core",
+  "bugs": {
+    "url": "https://github.com/Demonic-Attack/core/issues"
+  },
+  "repository": {
+    "url": "https://github.com/Demonic-Attack/core"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Demonic Attack",
+    "url": "https://github.com/demonicattack"
+  },
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo run build",
+    "deploy": "turbo run deploy",
+    "dev": "turbo run dev",
+    "format": "prettier -w \"**/*.{mjs,js,json}\"",
+    "lint": "turbo run lint",
+    "lint-staged": "turbo run lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{mjs,js,json}": "prettier -w"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "prettier": "^3.1.1",
-    "turbo": "latest"
+    "@demonicattack/prettier": "workspace:*",
+    "@vercel/style-guide": "5.2.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
+    "prettier": "3.1.1",
+    "turbo": "1.12.4",
+    "typescript": "5.3.3"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }

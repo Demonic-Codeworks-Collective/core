@@ -1,0 +1,43 @@
+{
+  "name": "@demonicattack/eslint",
+  "version": "0.0.1",
+  "description": "eslint config",
+  "keywords": [
+    "eslint"
+  ],
+  "homepage": "https://github.com/Demonic-Attack/core",
+  "bugs": {
+    "url": "https://github.com/Demonic-Attack/core/issues"
+  },
+  "repository": {
+    "url": "https://github.com/Demonic-Attack/core"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Demonic Attack",
+    "url": "https://github.com/demonicattack"
+  },
+  "main": "index.js",
+  "files": [
+    ".eslintrc.js"
+  ],
+  "scripts": {
+    "format": "prettier -w \"**/*.{mjs,js,json}\""
+  },
+  "lint-staged": {
+    "*.{mjs,js,json}": "prettier -w"
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "^14.1.0",
+    "@vercel/style-guide": "5.2.0"
+  },
+  "devDependencies": {
+    "@demonicattack/prettier": "workspace:*"
+  },
+  "peerDependencies": {
+    "@vercel/style-guide": "5.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

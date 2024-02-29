@@ -1,0 +1,42 @@
+{
+  "name": "@demonicattack/tsconfig",
+  "version": "0.0.1",
+  "description": "eslint config",
+  "keywords": [
+    "tsconfig"
+  ],
+  "homepage": "https://github.com/Demonic-Attack/core",
+  "bugs": {
+    "url": "https://github.com/Demonic-Attack/core/issues"
+  },
+  "repository": {
+    "url": "https://github.com/Demonic-Attack/core"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Demonic Attack",
+    "url": "https://github.com/demonicattack"
+  },
+  "files": [
+    "tsconfig.next.json"
+  ],
+  "scripts": {
+    "format": "prettier -w \"**/*.{mjs,js,json}\""
+  },
+  "lint-staged": {
+    "*.{mjs,js,json}": "prettier -w"
+  },
+  "dependencies": {
+    "@vercel/style-guide": "5.2.0"
+  },
+  "devDependencies": {
+    "@demonicattack/prettier": "workspace:*"
+  },
+  "peerDependencies": {
+    "@vercel/style-guide": "5.2.0",
+    "typescript": "5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
