@@ -25,11 +25,10 @@ pnpm add -D @demonicattack/eslint
 ```js
 // .eslintrc.js
 
-const { eslint } from '@demonicattack/eslint';
+const { eslint } = require('@demonicattack/eslint');
 
 /** @type {import('eslint').Linter.Config} */
-module.exports = eslint
-
+module.exports = eslint;
 ```
 
 # script
