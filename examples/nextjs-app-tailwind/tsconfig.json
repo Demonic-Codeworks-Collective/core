@@ -1,0 +1,41 @@
+{
+  "extends": "@demonicattack/tsconfig/tsconfig.next.json",
+  "compilerOptions": {
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
+    "paths": {
+      /* FSD aliases for src/ https://feature-sliced.design/ */
+      /*
+      "~/app": ["src/app"],
+      "~/app/*": ["src/app/*"],
+      "~/widgets": ["src/widgets"],
+      "~/widgets/*": ["src/widgets/*"],
+      "~/features": ["src/features"],
+      "~/features/*": ["src/features/*"],
+      "~/entities": ["src/entities"],
+      "~/entities/*": ["src/entities/*"],
+      "~/shared": ["src/shared"],
+      "~/shared/*": ["src/shared/*"]
+      */
+      "@/app": ["src/app"],
+      "@/app/*": ["src/app/*"],
+      "@/widgets": ["src/widgets"],
+      "@/widgets/*": ["src/widgets/*"],
+      "@/features": ["src/features"],
+      "@/features/*": ["src/features/*"],
+      "@/entities": ["src/entities"],
+      "@/entities/*": ["src/entities/*"],
+      "@/shared": ["src/shared"],
+      "@/shared/*": ["src/shared/*"]
+    }
+  },
+  "include": [
+    "image.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
