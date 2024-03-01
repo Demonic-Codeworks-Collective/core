@@ -1,6 +1,6 @@
 {
   "name": "@demonicattack/prettier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "prettier config",
   "keywords": [
     "prettier"
@@ -29,12 +29,14 @@
     "*.{mjs,js,json}": "prettier -w"
   },
   "dependencies": {
+    "@vercel/style-guide": "5.2.0",
     "prettier": "^3.2.5",
     "prettier-plugin-multiline-arrays": "^3.0.4",
     "prettier-plugin-prisma": "^5.0.0",
     "prettier-plugin-tailwindcss": "^0.5.11"
   },
   "peerDependencies": {
+    "@vercel/style-guide": "5.2.0",
     "prettier": "^3.2.5",
     "prettier-plugin-multiline-arrays": "^3.0.4",
     "prettier-plugin-prisma": "^5.0.0",
