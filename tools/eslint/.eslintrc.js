@@ -474,10 +474,22 @@ module.exports = {
         ],
       },
     },
+    {
+      files: ['**/*.{css,scss,sass}'],
+      rules: {
+        'import/extensions': 'off',
+      },
+    },
     // module declarations
     {
       files: ['**/*.d.ts'],
       rules: { 'import/no-default-export': 'off' },
+    },
+    {
+      files: ['**/*.d.ts'],
+      rules: {
+        'unicorn/prevent-abbreviations': 'off',
+      },
     },
   ],
 };
