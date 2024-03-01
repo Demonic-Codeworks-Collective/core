@@ -7,15 +7,19 @@ env:
   CI: true
   PNPM_CACHE_FOLDER: .pnpm-store
 jobs:
-  Lint-staged:
+   Lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
+      - name: install pnpm
+        run: npm i pnpm@latest -g
+      - name: Install
+        run: pnpm install --no-frozen-lockfile
       - name: Lint
-        run: npx run lint-staged
+        run: pnpm run lint-staged
   Publish:
-    needs: Lint-staged
+    needs: Lint
     runs-on: ubuntu-latest
     steps:
       - name: checkout code repository
