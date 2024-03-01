@@ -25,6 +25,7 @@ jobs:
       - name: install dependencies
         run: pnpm install --no-frozen-lockfile
       - name: create and publish versions
-        run: pnpm ci:publish
+        run: pnpm publish -r --no-git-checks --otp=${{ secrets.NPM_OTP }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_OTP: ${{ secrets.NPM_OTP }}
