@@ -1,4 +1,4 @@
-# core
+# ⚡️⚡️
 
 ## 🚨 Only for nextjs framework ^13 version (app-router)
 
