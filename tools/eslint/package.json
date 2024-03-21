@@ -1,6 +1,6 @@
 {
   "name": "@demonicattack/eslint",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "eslint config",
   "keywords": [
     "eslint"
@@ -20,7 +20,10 @@
   "type": "module",
   "main": "index.js",
   "files": [
-    ".eslintrc.js"
+    "eslint.config.next.js",
+    "eslint.config.react.js",
+    "eslint.config.typescript.js",
+    "eslint.config.node.js"
   ],
   "scripts": {
     "format": "prettier -w \"**/*.{mjs,js,json}\""
