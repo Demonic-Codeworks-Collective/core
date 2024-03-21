@@ -1,5 +1,5 @@
-const eslint = require('./.eslintrc.js');
+import { nodeConfig } from './eslint.config.node.js';
+import { reactConfig } from './eslint.config.react.js';
+import { typescriptConfig } from './eslint.config.typescript.js';
 
-module.exports = {
-  eslint,
-};
+export { nodeConfig as node, reactConfig as react, typescriptConfig as ts };
