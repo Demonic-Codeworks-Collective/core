@@ -1,7 +1,0 @@
-{
-  "extends": ["development"],
-  "hints": {
-    "typescript-config/is-valid": "off",
-    "compat-api/css": "off"
-  }
-}

@@ -43,8 +43,7 @@ const typescriptConfig = tseslint.config(
         cacheLifetime: {
           glob: 'Infinity',
         },
-        tsconfigRootDir: import.meta.url,
-        project: true,
+        project: ['tsconfig.json'],
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },

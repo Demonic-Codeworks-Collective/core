@@ -20,6 +20,7 @@
     "name": "Demonic Attack",
     "url": "https://github.com/demonicattack"
   },
+  "type": "module",
   "scripts": {
     "build": "turbo run build",
     "ci:publish": "",

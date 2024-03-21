@@ -1,6 +1,6 @@
 {
   "name": "@demonicattack/prettier",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "prettier config",
   "keywords": [
     "prettier"
@@ -18,9 +18,10 @@
     "url": "https://github.com/demonicattack"
   },
   "type": "module",
-  "main": "index.mjs",
+  "main": "index.js",
   "files": [
-    "prettier.config.mjs"
+    "prettier.config.js",
+    ".prettierignore"
   ],
   "scripts": {
     "format": "prettier -w \"**/*.{mjs,js,json}\""
@@ -29,18 +30,13 @@
     "*.{mjs,js,json}": "prettier -w"
   },
   "dependencies": {
-    "@vercel/style-guide": "5.2.0",
     "prettier": "^3.2.5",
     "prettier-plugin-multiline-arrays": "^3.0.4",
     "prettier-plugin-prisma": "^5.0.0",
     "prettier-plugin-tailwindcss": "^0.5.11"
   },
   "peerDependencies": {
-    "@vercel/style-guide": "5.2.0",
-    "prettier": "^3.2.5",
-    "prettier-plugin-multiline-arrays": "^3.0.4",
-    "prettier-plugin-prisma": "^5.0.0",
-    "prettier-plugin-tailwindcss": "^0.5.11"
+    "prettier": "^3.2.5"
   },
   "publishConfig": {
     "access": "public"
