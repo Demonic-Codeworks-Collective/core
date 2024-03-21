@@ -17,6 +17,7 @@
     "name": "Demonic Attack",
     "url": "https://github.com/demonicattack"
   },
+  "type": "module",
   "main": "index.js",
   "files": [
     ".eslintrc.js"
@@ -28,14 +29,44 @@
     "*.{mjs,js,json}": "prettier -w"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^14.1.0",
-    "@vercel/style-guide": "5.2.0"
+    "@babel/core": "^7.24.0",
+    "@babel/eslint-parser": "^7.23.10",
+    "@eslint/js": "^8.57.0",
+    "@stylistic/eslint-plugin-js": "^1.6.3",
+    "@stylistic/eslint-plugin-jsx": "^1.6.3",
+    "@stylistic/eslint-plugin-ts": "^1.6.3",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-next": "14.1.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-deprecation": "^2.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-eslint-plugin": "^5.4.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.2.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-regexp": "^2.3.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-sonarjs": "^0.24.0",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "eslint-plugin-unicorn": "^51.0.1",
+    "typescript": "^5.4.2",
+    "typescript-eslint": "^7.2.0"
   },
   "devDependencies": {
     "@demonicattack/prettier": "workspace:*"
   },
   "peerDependencies": {
-    "@vercel/style-guide": "5.2.0"
+    "eslint": "^8.57.0"
   },
   "publishConfig": {
     "access": "public"
