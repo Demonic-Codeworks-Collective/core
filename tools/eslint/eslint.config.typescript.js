@@ -1,3 +1,5 @@
+/* Parser */
+import tsParser from '@typescript-eslint/parser';
 /* Config */
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -35,9 +37,9 @@ const typescriptConfig = tseslint.config(
   {
     files: constant.TYPESCRIPT_FILES,
     languageOptions: {
-      parser: tseslint.parser,
+      parser: tsParser,
       parserOptions: {
-        project: './tsconfig.json',
+        project: ['tsconfig.json'],
         sourceType: 'module',
         ecmaVersion: constant.ECMA_VERSION,
         allowAutomaticSingleRunInference: true,

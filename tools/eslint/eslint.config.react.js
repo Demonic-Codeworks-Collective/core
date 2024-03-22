@@ -1,5 +1,5 @@
 /* Parser */
-import parser from '@typescript-eslint/parser';
+import tsParser from '@typescript-eslint/parser';
 /* Config */
 import eslintConfigPrettier from 'eslint-config-prettier';
 /* Plugins */
@@ -41,8 +41,8 @@ const reactConfig = [
       ...constant.TYPESCRIPT_FILES,
     ],
     languageOptions: {
-      parser,
-      project: './tsconfig.json',
+      parser: tsParser,
+      project: ['tsconfig.json'],
       ecmaVersion: constant.ECMA_VERSION,
       sourceType: 'module',
       parserOptions: {
@@ -56,10 +56,7 @@ const reactConfig = [
       'import/resolver': {
         ...eslintPluginImport.configs.react.settings['import/resolver'],
         node: {
-          extensions: [
-            ...constant.JAVASCRIPT_FILES,
-            ...constant.TYPESCRIPT_FILES,
-          ],
+          extensions: constant.JAVASCRIPT_FILES,
         },
       },
       react: {
