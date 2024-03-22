@@ -1,3 +1,5 @@
+/* Parser */
+import parser from '@typescript-eslint/parser';
 /* Config */
 import eslintConfigPrettier from 'eslint-config-prettier';
 /* Plugins */
@@ -34,7 +36,13 @@ const reactConfig = [
   ...compat.extends('airbnb'),
   ...compat.extends('airbnb/hooks'),
   {
+    files: [
+      ...constant.JAVASCRIPT_FILES,
+      ...constant.TYPESCRIPT_FILES,
+    ],
     languageOptions: {
+      parser,
+      project: './tsconfig.json',
       ecmaVersion: constant.ECMA_VERSION,
       sourceType: 'module',
       parserOptions: {
@@ -48,7 +56,10 @@ const reactConfig = [
       'import/resolver': {
         ...eslintPluginImport.configs.react.settings['import/resolver'],
         node: {
-          extensions: constant.JAVASCRIPT_FILES,
+          extensions: [
+            ...constant.JAVASCRIPT_FILES,
+            ...constant.TYPESCRIPT_FILES,
+          ],
         },
       },
       react: {

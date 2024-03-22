@@ -133,7 +133,7 @@ const typescriptConfig = tseslint.config(
     },
   },
   {
-    files: ['**/*.js'],
+    files: constant.JAVASCRIPT_FILES,
     extends: [tseslint.configs.disableTypeChecked],
     rules: {
       'deprecation/deprecation': 'off',
