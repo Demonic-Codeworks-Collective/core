@@ -98,6 +98,11 @@ const nodeConfig = [
       ...variablesRules,
       ...bestPracticeRules,
       ...possibleErrorsRules,
+      'eslint-plugin/consistent-output': 'off', // Might eventually be removed from `eslint-plugin/recommended`: https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin/issues/284
+      'eslint-plugin/require-meta-docs-description': [
+        'error',
+        { pattern: '^(Enforce|Require|Disallow) .+[^. ]$' },
+      ],
     },
   },
   eslintConfigPrettier,

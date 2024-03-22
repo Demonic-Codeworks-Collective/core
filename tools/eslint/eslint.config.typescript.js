@@ -10,8 +10,10 @@ import eslintConfigAirbnbTypescript from 'eslint-config-airbnb-typescript';
 import eslintPluginTsdoc from 'eslint-plugin-tsdoc';
 import eslintPluginJsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginImport from 'eslint-plugin-import';
+import eslintPluginPlugin from 'eslint-plugin-eslint-plugin';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintPluginStylisticTs from '@stylistic/eslint-plugin-ts';
+
 import eslintPluginDeprecation from 'eslint-plugin-deprecation';
 
 /* Utils */
@@ -25,6 +27,7 @@ const typescriptConfig = tseslint.config(
       ['jsdoc']: eslintPluginJsdoc,
       ['tsdoc']: eslintPluginTsdoc,
       ['import']: eslintPluginImport,
+      ['eslint-plugin']: eslintPluginPlugin,
       ['prettier']: eslintPluginPrettier,
       ['@stylistic/ts']: eslintPluginStylisticTs,
       ['deprecation']: eslintPluginDeprecation,
@@ -53,6 +56,11 @@ const typescriptConfig = tseslint.config(
       ...eslintPluginDeprecation.configs.recommended.rules,
       ...eslintPluginImport.configs.typescript.rules,
       ...eslintConfigAirbnbTypescript.rules,
+      'eslint-plugin/consistent-output': 'off', // Might eventually be removed from `eslint-plugin/recommended`: https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin/issues/284
+      'eslint-plugin/require-meta-docs-description': [
+        'error',
+        { pattern: '^(Enforce|Require|Disallow) .+[^. ]$' },
+      ],
       'deprecation/deprecation': 'error',
       'tsdoc/syntax': 'error',
       'import/default': 'off',
