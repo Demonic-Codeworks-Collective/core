@@ -1,3 +1,5 @@
+/* Parser */
+import parser from '@typescript-eslint/parser';
 /* Config */
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -35,15 +37,15 @@ const typescriptConfig = tseslint.config(
   {
     files: constant.TYPESCRIPT_FILES,
     languageOptions: {
-      parser: '@typescript-eslint/parser',
+      parser,
       parserOptions: {
+        project: './tsconfig.json',
         sourceType: 'module',
         ecmaVersion: constant.ECMA_VERSION,
         allowAutomaticSingleRunInference: true,
         cacheLifetime: {
           glob: 'Infinity',
         },
-        project: ['./tsconfig.json'],
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
@@ -133,7 +135,7 @@ const typescriptConfig = tseslint.config(
     },
   },
   {
-    files: constant.JAVASCRIPT_FILES,
+    files: ['**/*.js'],
     extends: [tseslint.configs.disableTypeChecked],
     rules: {
       'deprecation/deprecation': 'off',
