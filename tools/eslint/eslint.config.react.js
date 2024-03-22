@@ -1,5 +1,3 @@
-/* Parser */
-import tsParser from '@typescript-eslint/parser';
 /* Config */
 import eslintConfigPrettier from 'eslint-config-prettier';
 /* Plugins */
@@ -36,13 +34,8 @@ const reactConfig = [
   ...compat.extends('airbnb'),
   ...compat.extends('airbnb/hooks'),
   {
-    files: [
-      ...constant.JAVASCRIPT_FILES,
-      ...constant.TYPESCRIPT_FILES,
-    ],
+    files: constant.JAVASCRIPT_FILES,
     languageOptions: {
-      parser: tsParser,
-      project: ['tsconfig.json'],
       ecmaVersion: constant.ECMA_VERSION,
       sourceType: 'module',
       parserOptions: {
