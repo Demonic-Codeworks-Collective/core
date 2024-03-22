@@ -1,6 +1,3 @@
-/* Parser */
-import parser from '@typescript-eslint/parser';
-
 /* Config */
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -38,7 +35,7 @@ const typescriptConfig = tseslint.config(
   {
     files: constant.TYPESCRIPT_FILES,
     languageOptions: {
-      parser,
+      parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
         ecmaVersion: constant.ECMA_VERSION,
@@ -46,7 +43,7 @@ const typescriptConfig = tseslint.config(
         cacheLifetime: {
           glob: 'Infinity',
         },
-        project: true,
+        project: ['./tsconfig.json'],
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
