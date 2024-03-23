@@ -1,7 +1,8 @@
 {
   "name": "@demonicattack/prettier",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "prettier config",
+  "type": "module",
   "keywords": [
     "prettier"
   ],
@@ -17,21 +18,21 @@
     "name": "Demonic Attack",
     "url": "https://github.com/demonicattack"
   },
-  "type": "module",
   "main": "index.js",
   "files": [
     "prettier.config.js",
     ".prettierignore"
   ],
   "scripts": {
-    "format": "prettier -w \"**/*.{mjs,js,json}\""
+    "format": "prettier -w \"**/*.{js,json}\""
   },
   "lint-staged": {
-    "*.{mjs,js,json}": "prettier -w"
+    "*.{js,json}": "prettier -w"
   },
   "dependencies": {
     "prettier": "^3.2.5",
     "prettier-plugin-multiline-arrays": "^3.0.4",
+    "prettier-plugin-packagejson": "^2.4.12",
     "prettier-plugin-prisma": "^5.0.0",
     "prettier-plugin-tailwindcss": "^0.5.11"
   },

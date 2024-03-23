@@ -1,5 +1,4 @@
 {
-  "extends": "@vercel/style-guide/typescript/node20",
   "compilerOptions": {
     "target": "ESNext",
     "lib": [
@@ -7,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "noUncheckedIndexedAccess": true,
     "allowJs": true,
     "noEmit": true,
     "module": "esnext",

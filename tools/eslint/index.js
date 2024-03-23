@@ -1,5 +1,3 @@
-import { nodeConfig } from './eslint.config.node.js';
-import { reactConfig } from './eslint.config.react.js';
-import { typescriptConfig } from './eslint.config.typescript.js';
+import { eslint } from './eslint.config.js';
 
-export { nodeConfig as node, reactConfig as react, typescriptConfig as ts };
+export { eslint };

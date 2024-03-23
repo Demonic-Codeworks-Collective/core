@@ -23,19 +23,18 @@
   "type": "module",
   "scripts": {
     "build": "turbo run build",
-    "ci:publish": "",
     "deploy": "turbo run deploy",
     "dev": "turbo run dev",
-    "format": "prettier -w \"**/*.{mjs,js,json}\"",
+    "format": "prettier -w \"**/*.{js,json}\"",
+    "lint": "turbo run lint",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{mjs,js,json}": "prettier -w"
+    "*.{js,json}": "prettier -w"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@demonicattack/prettier": "workspace:*",
-    "@vercel/style-guide": "5.2.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "prettier": "3.1.1",

@@ -1,6 +1,6 @@
 {
   "name": "@demonicattack/tsconfig",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "eslint config",
   "keywords": [
     "tsconfig"
@@ -17,23 +17,20 @@
     "name": "Demonic Attack",
     "url": "https://github.com/demonicattack"
   },
+  "type": "module",
   "files": [
     "tsconfig.next.json"
   ],
   "scripts": {
-    "format": "prettier -w \"**/*.{mjs,js,json}\""
+    "format": "prettier -w \"**/*.{js,json}\""
   },
   "lint-staged": {
-    "*.{mjs,js,json}": "prettier -w"
-  },
-  "dependencies": {
-    "@vercel/style-guide": "5.2.0"
+    "*.{js,json}": "prettier -w"
   },
   "devDependencies": {
     "@demonicattack/prettier": "workspace:*"
   },
   "peerDependencies": {
-    "@vercel/style-guide": "5.2.0",
     "typescript": "5.3.3"
   },
   "publishConfig": {
