@@ -106,8 +106,7 @@ const eslint = tseslint.config(
         cacheLifetime: {
           glob: 'Infinity',
         },
-        project: ['./tsconfig.json'],
-        tsconfigRootDir: baseDirectory,
+        project: ['tsconfig.json'],
         warnOnUnsupportedTypeScriptVersion: false,
       },
       sourceType: 'module',
