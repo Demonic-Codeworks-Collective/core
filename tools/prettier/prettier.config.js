@@ -13,8 +13,8 @@ const prettier = {
   plugins: [
     "prettier-plugin-packagejson",
     "prettier-plugin-prisma",
-    "prettier-plugin-tailwindcss",
     "prettier-plugin-multiline-arrays",
+    "prettier-plugin-tailwindcss",
   ],
   multilineArraysWrapThreshold: 1,
 };
