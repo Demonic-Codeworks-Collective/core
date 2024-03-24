@@ -31,6 +31,17 @@ import { eslint } from '@demonicattack/eslint';
 export default eslint;
 ```
 
+# add .vscode settings
+
+```js
+{
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.options": {
+    "overrideConfigFile": "./eslint.config.js"
+  },
+}
+```
+
 # script
 
 ```json
