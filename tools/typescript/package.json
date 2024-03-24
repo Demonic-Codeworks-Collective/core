@@ -1,7 +1,7 @@
 {
   "name": "@demonicattack/tsconfig",
-  "version": "0.0.2",
-  "description": "eslint config",
+  "version": "0.0.3",
+  "description": "tsconfig config",
   "keywords": [
     "tsconfig"
   ],
@@ -18,6 +18,7 @@
     "url": "https://github.com/demonicattack"
   },
   "type": "module",
+  "main": "tsconfig.next.json",
   "files": [
     "tsconfig.next.json"
   ],

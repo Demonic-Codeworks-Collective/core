@@ -1,6 +1,6 @@
 ![MasterHead](https://cdn.icon-icons.com/icons2/2699/PNG/512/eslint_logo_icon_170171.png)
 
-<h1 align="start">eslint config by @demonicattack</h1>
+<h1 align="start">flat eslint config by @demonicattack</h1>
 
 # npm
 
@@ -23,12 +23,12 @@ pnpm add -D @demonicattack/eslint
 # configuration file
 
 ```js
-// .eslintrc.js
+// eslint.config.js
 
-const { eslint } = require('@demonicattack/eslint');
+import { eslint } from '@demonicattack/eslint';
 
-/** @type {import('eslint').Linter.Config} */
-module.exports = eslint;
+/**@type {import('eslint').Linter.FlatConfig[]} */
+export default eslint;
 ```
 
 # script
@@ -36,7 +36,7 @@ module.exports = eslint;
 ```json
 {
   "scripts": {
-    "lint": "eslint --ext .ts,.tsx --fix --max-warnings 0 --no-error-on-unmatched-pattern ."
+    "lint": "eslint -c eslint.config.js --fix --no-error-on-unmatched-pattern ."
   }
 }
 ```

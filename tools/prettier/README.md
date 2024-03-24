@@ -23,16 +23,12 @@ pnpm add -D @demonicattack/prettier
 # configuration file
 
 ```js
-// prettier.config.mjs
+// prettier.config.js
 
-import prettier from '@demonicattack/prettier';
+import { prettier } from "@demonicattack/prettier";
 
 /** @type {import('prettier').Options} */
-const config = {
-  ...prettier,
-  plugins: [...prettier.plugins],
-};
-export default config;
+export default prettier;
 ```
 
 # .prettierignore
