@@ -29,16 +29,12 @@ pnpm add -D @demonicattack/prettier
 # configuration file
 
 ```js
-// prettier.config.mjs
+// prettier.config.js
 
-import prettier from '@demonicattack/prettier';
+import { prettier } from '@demonicattack/prettier';
 
 /** @type {import('prettier').Options} */
-const config = {
-  ...prettier,
-  plugins: [...prettier.plugins],
-};
-export default config;
+export default prettier;
 ```
 
 # .prettierignore
@@ -84,12 +80,23 @@ pnpm add -D @demonicattack/eslint
 # configuration file
 
 ```js
-// .eslintrc.js
+// eslint.config.js
 
-const { eslint } = require('@demonicattack/eslint');
+import { eslint } from '@demonicattack/eslint';
 
-/** @type {import('eslint').Linter.Config} */
-module.exports = eslint;
+/**@type {import('eslint').Linter.FlatConfig[]} */
+export default eslint;
+```
+
+# add .vscode settings 
+
+```js
+{
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.options": {
+    "overrideConfigFile": "./eslint.config.js"
+  },
+}
 ```
 
 # script
@@ -97,7 +104,7 @@ module.exports = eslint;
 ```json
 {
   "scripts": {
-    "lint": "eslint --ext .ts,.tsx --fix --max-warnings 0 --no-error-on-unmatched-pattern ."
+    "lint": "eslint -c eslint.config.js --fix --no-error-on-unmatched-pattern ."
   }
 }
 ```
