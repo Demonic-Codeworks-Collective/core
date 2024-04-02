@@ -2,9 +2,6 @@
 
 ## 🚨 Only for nextjs framework ^13 version (app-router)
 
-## Starting a new project? dowload starter from `` examples/nexjs-app-tailwind `` [Dowload](https://download-directory.github.io/?url=https://github.com/Demonic-Attack/core/tree/main/examples/nextjs-app-tailwind)
-
-
 ## 🛠️ tools
 ![MasterHead](https://prettier.io/icon.png)
 
