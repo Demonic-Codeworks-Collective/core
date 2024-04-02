@@ -138,34 +138,13 @@ const eslint = tseslint.config(
       'n/no-extraneous-require': 'off',
       'n/no-extraneous-import': 'off',
       'n/no-missing-require': 'off',
-      'n/prefer-global/buffer': [
-        'error',
-        'never',
-      ],
-      'n/prefer-global/process': [
-        'error',
-        'never',
-      ],
-      'n/prefer-global/console': [
-        'error',
-        'always',
-      ],
-      'n/prefer-global/text-decoder': [
-        'error',
-        'always',
-      ],
-      'n/prefer-global/text-encoder': [
-        'error',
-        'always',
-      ],
-      'n/prefer-global/url-search-params': [
-        'error',
-        'always',
-      ],
-      'n/prefer-global/url': [
-        'error',
-        'always',
-      ],
+      'n/prefer-global/buffer': ['error', 'never'],
+      'n/prefer-global/process': ['error', 'never'],
+      'n/prefer-global/console': ['error', 'always'],
+      'n/prefer-global/text-decoder': ['error', 'always'],
+      'n/prefer-global/text-encoder': ['error', 'always'],
+      'n/prefer-global/url-search-params': ['error', 'always'],
+      'n/prefer-global/url': ['error', 'always'],
       'n/prefer-promises/dns': 'error',
       'n/prefer-promises/fs': 'error',
       'n/no-path-concat': 'error',
@@ -224,10 +203,7 @@ const eslint = tseslint.config(
       'import/no-absolute-path': 'error',
       'import/no-cycle': 'error',
       'import/no-default-export': 'error',
-      'import/no-extraneous-dependencies': [
-        'error',
-        { includeTypes: true },
-      ],
+      'import/no-extraneous-dependencies': ['error', { includeTypes: true }],
       'import/no-mutable-exports': 'error',
       'import/no-relative-packages': 'error',
       'import/no-self-import': 'error',
@@ -251,22 +227,12 @@ const eslint = tseslint.config(
         'error',
         {
           groups: [
-            [
-              '^react',
-              '^@?\\w',
-            ],
+            ['^react', '^@?\\w'],
             ['^@(demonicattack/.*|$)'],
             ['^@(([\\/.]?\\w)|assets|test-utils)'],
             ['^\\u0000'],
-            [
-              '^\\.\\.(?!/?$)',
-              '^\\.\\./?$',
-            ],
-            [
-              '^\\./(?=.*/)(?!/?$)',
-              '^\\.(?!/?$)',
-              '^\\./?$',
-            ],
+            ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+            ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
             ['^.+\\.s?css$'],
           ],
         },
@@ -281,17 +247,11 @@ const eslint = tseslint.config(
       'regexp/match-any': [
         'error',
         {
-          allows: [
-            'dotAll',
-            '[\\S\\s]',
-          ],
+          allows: ['dotAll', '[\\S\\s]'],
         },
       ],
       'regexp/strict': 'off',
-      'regexp/no-useless-flag': [
-        'error',
-        { strictTypes: false },
-      ],
+      'regexp/no-useless-flag': ['error', { strictTypes: false }],
       'regexp/prefer-lookaround': 'off',
       'regexp/prefer-named-capture-group': 'off',
       'regexp/require-unicode-regexp': 'off',
@@ -346,29 +306,17 @@ const eslint = tseslint.config(
       'unicorn/no-array-callback-reference': 'warn',
       'unicorn/no-null': 'off',
       'unicorn/no-array-reduce': 'off',
-      'unicorn/explicit-length-check': [
-        'error',
-        { 'non-zero': 'not-equal' },
-      ],
+      'unicorn/explicit-length-check': ['error', { 'non-zero': 'not-equal' }],
       'unicorn/prefer-ternary': 'off',
       'unicorn/prefer-default-parameters': 'off',
       'unicorn/consistent-destructuring': 'off',
       'unicorn/no-object-as-default-parameter': 'off',
       'unicorn/import-index': 'off',
       'unicorn/prefer-module': 'off',
-      'unicorn/prefer-export-from': [
-        'error',
-        { ignoreUsedVariables: true },
-      ],
-      'unicorn/relative-url-style': [
-        'error',
-        'always',
-      ],
+      'unicorn/prefer-export-from': ['error', { ignoreUsedVariables: true }],
+      'unicorn/relative-url-style': ['error', 'always'],
       'unicorn/prefer-json-parse-buffer': 'error',
-      'unicorn/switch-case-braces': [
-        'error',
-        'avoid',
-      ],
+      'unicorn/switch-case-braces': ['error', 'avoid'],
       'unicorn/no-unnecessary-polyfills': 'off',
 
       /*
@@ -407,18 +355,9 @@ const eslint = tseslint.config(
       'no-useless-return': 'error',
       'prefer-named-capture-group': 'error',
       'prefer-regex-literals': 'error',
-      'array-callback-return': [
-        'error',
-        { allowImplicit: true },
-      ],
-      'prefer-promise-reject-errors': [
-        'error',
-        { allowEmptyReject: true },
-      ],
-      curly: [
-        'error',
-        'multi-line',
-      ],
+      'array-callback-return': ['error', { allowImplicit: true }],
+      'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+      curly: ['error', 'multi-line'],
       eqeqeq: 'error',
       yoda: 'error',
 
@@ -434,14 +373,8 @@ const eslint = tseslint.config(
           properties: 'never',
         },
       ],
-      'func-names': [
-        'error',
-        'as-needed',
-      ],
-      'new-cap': [
-        'error',
-        { capIsNew: false },
-      ],
+      'func-names': ['error', 'as-needed'],
+      'new-cap': ['error', { capIsNew: false }],
       'new-parens': 'error',
       'no-array-constructor': 'error',
       'no-bitwise': 'error',
@@ -554,10 +487,7 @@ const eslint = tseslint.config(
         },
       ],
       '@typescript-eslint/no-useless-constructor': 'error',
-      '@typescript-eslint/consistent-type-exports': [
-        'warn',
-        { fixMixedExportsWithInlineTypeSpecifier: true },
-      ],
+      '@typescript-eslint/consistent-type-exports': ['warn', { fixMixedExportsWithInlineTypeSpecifier: true }],
       '@typescript-eslint/consistent-type-imports': [
         'warn',
         {
@@ -566,19 +496,13 @@ const eslint = tseslint.config(
           prefer: 'type-imports',
         },
       ],
-      '@typescript-eslint/explicit-function-return-type': [
-        'warn',
-        { allowExpressions: true },
-      ],
+      '@typescript-eslint/explicit-function-return-type': ['warn', { allowExpressions: true }],
       '@typescript-eslint/method-signature-style': 'warn',
       '@typescript-eslint/naming-convention': [
         'error',
         {
           format: ['PascalCase'],
-          selector: [
-            'typeLike',
-            'enumMember',
-          ],
+          selector: ['typeLike', 'enumMember'],
         },
         {
           custom: {
@@ -592,10 +516,7 @@ const eslint = tseslint.config(
       '@typescript-eslint/no-redundant-type-constituents': 'warn',
       '@typescript-eslint/no-unnecessary-qualifier': 'warn',
       '@typescript-eslint/prefer-regexp-exec': 'warn',
-      '@typescript-eslint/require-array-sort-compare': [
-        'error',
-        { ignoreStringArrays: true },
-      ],
+      '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: true }],
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
     },
     settings: {
@@ -639,10 +560,7 @@ const eslint = tseslint.config(
       'react/no-array-index-key': 'warn',
       'react/no-unstable-nested-components': 'error',
       'react/self-closing-comp': 'warn',
-      'react/jsx-no-useless-fragment': [
-        'warn',
-        { allowExpressions: true },
-      ],
+      'react/jsx-no-useless-fragment': ['warn', { allowExpressions: true }],
       'react/function-component-definition': [
         'error',
         {
@@ -662,12 +580,7 @@ const eslint = tseslint.config(
       'import/resolver': {
         ...importPlugin.configs.react.settings['import/resolver'],
         node: {
-          extensions: [
-            '.js',
-            '.jsx',
-            '.ts',
-            '.tsx',
-          ],
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
       },
       react: {
@@ -699,7 +612,7 @@ const eslint = tseslint.config(
     },
   },
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.config.{ts,cts,mts}'],
     extends: [tseslint.configs.disableTypeChecked],
     rules: {
       'deprecation/deprecation': 'off',
