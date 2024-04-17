@@ -82,6 +82,7 @@ const eslint = tseslint.config(
       '**/build/**',
       '.next/*',
       '**/*.config.{js,cjs,mjs}',
+      '.storybook/*',
     ],
   },
   js.configs.recommended,
