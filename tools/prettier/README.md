@@ -23,7 +23,7 @@ pnpm add -D @demonicattack/prettier
 # configuration file
 
 ```js
-// prettier.config.js
+// prettier.config.mjs
 
 import { prettier } from '@demonicattack/prettier';
 
