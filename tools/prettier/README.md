@@ -25,9 +25,9 @@ pnpm add -D @demonicattack/prettier
 ```js
 // prettier.config.js
 
-import { prettier } from "@demonicattack/prettier";
+import { prettier } from '@demonicattack/prettier';
 
-/** @type {import('prettier').Options} */
+/** @type {import('@demonicattack/prettier').PrettierOptions} */
 export default prettier;
 ```
 
@@ -45,8 +45,8 @@ copy node_modules/@demonicattack/prettier/.prettierignore .prettierignore
 
 ```json
 {
-  "scripts": {
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
-  }
+    "scripts": {
+        "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\""
+    }
 }
 ```

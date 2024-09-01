@@ -1,70 +1,70 @@
 {
-  "name": "@demonicattack/eslint",
-  "version": "0.0.20",
-  "description": "eslint config",
-  "keywords": [
-    "eslint"
-  ],
-  "homepage": "https://github.com/Demonic-Attack/core",
-  "bugs": {
-    "url": "https://github.com/Demonic-Attack/core/issues"
-  },
-  "repository": {
-    "url": "https://github.com/Demonic-Attack/core"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Demonic Attack",
-    "url": "https://github.com/demonicattack"
-  },
-  "type": "module",
-  "main": "index.js",
-  "files": [
-    "eslint.config.js"
-  ],
-  "scripts": {
-    "format": "prettier -w \"**/*.{js,json}\"",
-    "lint": "eslint -c eslint.config.js --fix --no-error-on-unmatched-pattern ."
-  },
-  "lint-staged": {
-    "*.{js,json}": "prettier -w"
-  },
-  "dependencies": {
-    "@eslint/eslintrc": "^3.0.2",
-    "@eslint/js": "^8.57.0",
-    "@next/eslint-plugin-next": "^14.1.4",
-    "@stylistic/eslint-plugin": "^1.7.0",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^18.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-deprecation": "^2.0.0",
-    "eslint-plugin-es-x": "^7.6.0",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-eslint-plugin": "^5.4.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^48.2.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-regexp": "^2.3.0",
-    "eslint-plugin-simple-import-sort": "^12.0.0",
-    "eslint-plugin-tsdoc": "^0.2.17",
-    "eslint-plugin-unicorn": "^51.0.1",
-    "globals": "^14.0.0",
-    "typescript-eslint": "^7.3.1"
-  },
-  "devDependencies": {
-    "@demonicattack/prettier": "workspace:*"
-  },
-  "peerDependencies": {
-    "eslint": "^8.57.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@demonicattack/eslint",
+    "version": "0.0.20",
+    "description": "eslint config",
+    "keywords": [
+        "eslint"
+    ],
+    "homepage": "https://github.com/Demonic-Attack/core",
+    "bugs": {
+        "url": "https://github.com/Demonic-Attack/core/issues"
+    },
+    "repository": {
+        "url": "https://github.com/Demonic-Attack/core"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Demonic Attack",
+        "url": "https://github.com/demonicattack"
+    },
+    "type": "module",
+    "main": "index.js",
+    "files": [
+        "eslint.config.js"
+    ],
+    "scripts": {
+        "format": "prettier -w \"**/*.{js,json}\"",
+        "lint": "eslint -c eslint.config.js --fix --no-error-on-unmatched-pattern ."
+    },
+    "lint-staged": {
+        "*.{js,json}": "prettier -w"
+    },
+    "dependencies": {
+        "@eslint/eslintrc": "^3.0.2",
+        "@eslint/js": "^8.57.0",
+        "@next/eslint-plugin-next": "^14.1.4",
+        "@stylistic/eslint-plugin": "^1.7.0",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript": "^18.0.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-deprecation": "^2.0.0",
+        "eslint-plugin-es-x": "^7.6.0",
+        "eslint-plugin-eslint-comments": "^3.2.0",
+        "eslint-plugin-eslint-plugin": "^5.4.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-jsdoc": "^48.2.1",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "eslint-plugin-n": "^16.6.2",
+        "eslint-plugin-prettier": "^5.1.3",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-plugin-react": "^7.34.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-regexp": "^2.3.0",
+        "eslint-plugin-simple-import-sort": "^12.0.0",
+        "eslint-plugin-tsdoc": "^0.2.17",
+        "eslint-plugin-unicorn": "^51.0.1",
+        "globals": "^14.0.0",
+        "typescript-eslint": "^7.3.1"
+    },
+    "devDependencies": {
+        "@demonicattack/prettier": "workspace:*"
+    },
+    "peerDependencies": {
+        "eslint": "^8.57.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

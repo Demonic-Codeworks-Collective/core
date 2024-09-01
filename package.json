@@ -1,48 +1,48 @@
 {
-  "name": "@demonicattack/core",
-  "version": "0.0.1",
-  "private": true,
-  "description": "Core tools for Demonic Attack",
-  "keywords": [
-    "prettier",
-    "eslint",
-    "tsconfig"
-  ],
-  "homepage": "https://github.com/Demonic-Attack/core",
-  "bugs": {
-    "url": "https://github.com/Demonic-Attack/core/issues"
-  },
-  "repository": {
-    "url": "https://github.com/Demonic-Attack/core"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Demonic Attack",
-    "url": "https://github.com/demonicattack"
-  },
-  "type": "module",
-  "scripts": {
-    "build": "turbo run build",
-    "deploy": "turbo run deploy",
-    "dev": "turbo run dev",
-    "format": "prettier -w \"**/*.{js,json}\"",
-    "lint": "turbo run lint",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.{js,json}": "prettier -w"
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "@demonicattack/prettier": "workspace:*",
-    "husky": "9.0.11",
-    "lint-staged": "15.2.2",
-    "prettier": "3.1.1",
-    "turbo": "1.12.4",
-    "typescript": "5.3.3"
-  },
-  "packageManager": "pnpm@8.9.0",
-  "engines": {
-    "node": ">=20"
-  }
+    "name": "@demonicattack/core",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Core tools for Demonic Attack",
+    "keywords": [
+        "prettier",
+        "eslint",
+        "tsconfig"
+    ],
+    "homepage": "https://github.com/Demonic-Attack/core",
+    "bugs": {
+        "url": "https://github.com/Demonic-Attack/core/issues"
+    },
+    "repository": {
+        "url": "https://github.com/Demonic-Attack/core"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Demonic Attack",
+        "url": "https://github.com/demonicattack"
+    },
+    "type": "module",
+    "scripts": {
+        "build": "turbo run build",
+        "deploy": "turbo run deploy",
+        "dev": "turbo run dev",
+        "format": "prettier -w \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\"",
+        "lint": "turbo run lint",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": "prettier --write"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.27.7",
+        "@demonicattack/prettier": "workspace:*",
+        "husky": "9.1.5",
+        "lint-staged": "15.2.10",
+        "prettier": "3.3.3",
+        "turbo": "2.1.1",
+        "typescript": "5.5.4"
+    },
+    "packageManager": "pnpm@9.9.0",
+    "engines": {
+        "node": ">=22"
+    }
 }

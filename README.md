@@ -3,6 +3,7 @@
 ## 🚨 Only for nextjs framework ^13 version (app-router)
 
 ## 🛠️ tools
+
 ![MasterHead](https://prettier.io/icon.png)
 
 # npm
@@ -48,9 +49,9 @@ copy node_modules/@demonicattack/prettier/.prettierignore .prettierignore
 
 ```json
 {
-  "scripts": {
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
-  }
+    "scripts": {
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
+    }
 }
 ```
 
@@ -85,7 +86,7 @@ import { eslint } from '@demonicattack/eslint';
 export default eslint;
 ```
 
-# add .vscode settings 
+# add .vscode settings
 
 ```js
 {
@@ -100,12 +101,11 @@ export default eslint;
 
 ```json
 {
-  "scripts": {
-    "lint": "eslint -c eslint.config.js --fix --no-error-on-unmatched-pattern ."
-  }
+    "scripts": {
+        "lint": "eslint -c eslint.config.js --fix --no-error-on-unmatched-pattern ."
+    }
 }
 ```
-
 
 ![MasterHead](https://img-c.udemycdn.com/course/750x422/4834448_66ec.jpg)
 
@@ -136,7 +136,3 @@ pnpm add -D @demonicattack/tsconfig
   "extends": ["@demonicattack/tsconfig/tsconfig.next.json"],
 }
 ```
-
-
-
-

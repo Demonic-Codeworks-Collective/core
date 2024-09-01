@@ -1,40 +1,40 @@
 {
-  "name": "@demonicattack/tsconfig",
-  "version": "0.0.4",
-  "description": "tsconfig config",
-  "keywords": [
-    "tsconfig"
-  ],
-  "homepage": "https://github.com/Demonic-Attack/core",
-  "bugs": {
-    "url": "https://github.com/Demonic-Attack/core/issues"
-  },
-  "repository": {
-    "url": "https://github.com/Demonic-Attack/core"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Demonic Attack",
-    "url": "https://github.com/demonicattack"
-  },
-  "type": "module",
-  "main": "tsconfig.next.json",
-  "files": [
-    "tsconfig.next.json"
-  ],
-  "scripts": {
-    "format": "prettier -w \"**/*.{js,json}\""
-  },
-  "lint-staged": {
-    "*.{js,json}": "prettier -w"
-  },
-  "devDependencies": {
-    "@demonicattack/prettier": "workspace:*"
-  },
-  "peerDependencies": {
-    "typescript": "5.4.3"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@demonicattack/tsconfig",
+    "version": "0.0.4",
+    "description": "tsconfig config",
+    "keywords": [
+        "tsconfig"
+    ],
+    "homepage": "https://github.com/Demonic-Attack/core",
+    "bugs": {
+        "url": "https://github.com/Demonic-Attack/core/issues"
+    },
+    "repository": {
+        "url": "https://github.com/Demonic-Attack/core"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Demonic Attack",
+        "url": "https://github.com/demonicattack"
+    },
+    "type": "module",
+    "main": "tsconfig.next.json",
+    "files": [
+        "tsconfig.next.json"
+    ],
+    "scripts": {
+        "format": "prettier -w \"**/*.{js,json}\""
+    },
+    "lint-staged": {
+        "*.{js,json}": "prettier -w"
+    },
+    "devDependencies": {
+        "@demonicattack/prettier": "workspace:*"
+    },
+    "peerDependencies": {
+        "typescript": "5.4.3"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

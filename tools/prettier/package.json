@@ -1,45 +1,47 @@
 {
-  "name": "@demonicattack/prettier",
-  "version": "0.0.6",
-  "description": "prettier config",
-  "type": "module",
-  "keywords": [
-    "prettier"
-  ],
-  "homepage": "https://github.com/Demonic-Attack/core",
-  "bugs": {
-    "url": "https://github.com/Demonic-Attack/core/issues"
-  },
-  "repository": {
-    "url": "https://github.com/Demonic-Attack/core"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Demonic Attack",
-    "url": "https://github.com/demonicattack"
-  },
-  "main": "index.js",
-  "files": [
-    "prettier.config.js",
-    ".prettierignore"
-  ],
-  "scripts": {
-    "format": "prettier -w \"**/*.{js,json}\""
-  },
-  "lint-staged": {
-    "*.{js,json}": "prettier -w"
-  },
-  "dependencies": {
-    "prettier": "^3.2.5",
-    "prettier-plugin-multiline-arrays": "^3.0.4",
-    "prettier-plugin-packagejson": "^2.4.12",
-    "prettier-plugin-prisma": "^5.0.0",
-    "prettier-plugin-tailwindcss": "^0.5.11"
-  },
-  "peerDependencies": {
-    "prettier": "^3.2.5"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "@demonicattack/prettier",
+    "version": "0.0.7",
+    "description": "prettier config",
+    "keywords": [
+        "prettier"
+    ],
+    "homepage": "https://github.com/Demonic-Attack/core",
+    "bugs": {
+        "url": "https://github.com/Demonic-Attack/core/issues"
+    },
+    "repository": {
+        "url": "https://github.com/Demonic-Attack/core"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Demonic Attack",
+        "url": "https://github.com/demonicattack"
+    },
+    "type": "module",
+    "main": "index.mjs",
+    "files": [
+        "prettier.config.mjs",
+        ".prettierignore"
+    ],
+    "scripts": {
+        "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\""
+    },
+    "lint-staged": {
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": "prettier --write"
+    },
+    "prettier": "./prettier.config.mjs",
+    "dependencies": {
+        "prettier": "^3.3.3",
+        "prettier-plugin-multiline-arrays": "^3.0.6",
+        "prettier-plugin-packagejson": "^2.5.2",
+        "prettier-plugin-prisma": "^5.0.0",
+        "prettier-plugin-sort-json": "^4.0.0",
+        "prettier-plugin-tailwindcss": "^0.6.6"
+    },
+    "peerDependencies": {
+        "prettier": "^3.3.3"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }

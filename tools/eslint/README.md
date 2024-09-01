@@ -46,8 +46,8 @@ export default eslint;
 
 ```json
 {
-  "scripts": {
-    "lint": "eslint -c eslint.config.js --fix --no-error-on-unmatched-pattern ."
-  }
+    "scripts": {
+        "lint": "eslint -c eslint.config.js --fix --no-error-on-unmatched-pattern ."
+    }
 }
 ```
