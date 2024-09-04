@@ -1,4 +1,4 @@
 import { prettier } from '@demonicattack/prettier';
 
-/** @type {import('prettier').Options} */
+/** @type {import('@demonicattack/prettier').PrettierOptions} */
 export default prettier;

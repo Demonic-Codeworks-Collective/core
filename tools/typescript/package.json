@@ -23,10 +23,11 @@
         "tsconfig.next.json"
     ],
     "scripts": {
-        "format": "prettier -w \"**/*.{js,json}\""
+        "clean": "rm -rf .turbo node_modules",
+        "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\""
     },
     "lint-staged": {
-        "*.{js,json}": "prettier -w"
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": "prettier --write"
     },
     "devDependencies": {
         "@demonicattack/prettier": "workspace:*"

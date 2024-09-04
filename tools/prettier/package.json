@@ -1,6 +1,6 @@
 {
     "name": "@demonicattack/prettier",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "prettier config",
     "keywords": [
         "prettier"
@@ -25,6 +25,7 @@
         ".prettierignore"
     ],
     "scripts": {
+        "clean": "rm -rf .turbo node_modules",
         "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\""
     },
     "lint-staged": {

@@ -1,3 +1,6 @@
+/** @typedef {import('prettier').Config | import('prettier-plugin-multiline-arrays').MultilineArrayOptions | import('prettier-plugin-tailwindcss').PluginOptions } PrettierOptions */
+
+/** @type { PrettierOptions } */
 const prettier = {
     plugins: [
         'prettier-plugin-multiline-arrays',
@@ -6,7 +9,7 @@ const prettier = {
         'prettier-plugin-sort-json',
         'prettier-plugin-prisma',
     ],
-    htmlWhitespaceSensitivity: 'strict',
+    htmlWhitespaceSensitivity: 'css',
     embeddedLanguageFormatting: 'auto',
     multilineArraysWrapThreshold: 1,
     experimentalTernaries: true,

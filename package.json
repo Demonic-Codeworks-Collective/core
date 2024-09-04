@@ -23,17 +23,23 @@
     "type": "module",
     "scripts": {
         "build": "turbo run build",
+        "clean": "git clean -xdf node_modules && pnpm run clean:all",
+        "clean:all": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
         "deploy": "turbo run deploy",
         "dev": "turbo run dev",
-        "format": "prettier -w \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\"",
-        "lint": "turbo run lint",
-        "prepare": "husky install"
+        "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
+        "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+        "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+        "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+        "prepare": "husky install",
+        "typecheck": "turbo typecheck"
     },
     "lint-staged": {
         "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": "prettier --write"
     },
+    "prettier": "./prettier.config.mjs",
     "devDependencies": {
-        "@changesets/cli": "^2.27.7",
+        "@changesets/cli": "^2.27.8",
         "@demonicattack/prettier": "workspace:*",
         "husky": "9.1.5",
         "lint-staged": "15.2.10",
