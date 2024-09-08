@@ -1,6 +1,6 @@
 {
     "name": "@demonicattack/prettier",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "prettier config",
     "keywords": [
         "prettier"
@@ -19,6 +19,7 @@
     },
     "type": "module",
     "main": "index.mjs",
+    "types": "index.d.ts",
     "files": [
         "prettier.config.mjs",
         ".prettierignore"

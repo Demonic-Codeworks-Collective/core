@@ -23,7 +23,7 @@ pnpm add -D @demonicattack/prettier
 # configuration file
 
 ```js
-// prettier.config.mjs
+// prettier.config.mjs or prettier.config.js -> set "type": "module" in package.json 
 
 import { prettier } from '@demonicattack/prettier';
 

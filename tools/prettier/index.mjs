@@ -1,6 +1,6 @@
-/** @typedef {import('prettier').Config | import('prettier-plugin-multiline-arrays').MultilineArrayOptions | import('prettier-plugin-tailwindcss').PluginOptions } PrettierOptions */
+// /** @typedef {import('prettier').Config | import('prettier-plugin-multiline-arrays').MultilineArrayOptions | import('prettier-plugin-tailwindcss').PluginOptions } PrettierOptions */
 
-/** @type { PrettierOptions } */
+// /** @type { PrettierOptions } */
 const prettier = {
     plugins: [
         'prettier-plugin-multiline-arrays',
