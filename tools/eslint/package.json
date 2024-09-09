@@ -1,6 +1,6 @@
 {
     "name": "@demonicattack/eslint",
-    "version": "0.0.21",
+    "version": "0.0.22",
     "description": "eslint config",
     "keywords": [
         "eslint"
@@ -19,10 +19,11 @@
     },
     "type": "module",
     "main": "index.mjs",
-    "types": "./configs/types/configs.d.ts",
+    "types": "index.d.ts",
     "files": [
-        "configs",
-        "react.mjs"
+        "index.d.ts",
+        "react.mjs",
+        "configs"
     ],
     "scripts": {
         "clean": "rm -rf .turbo node_modules",
