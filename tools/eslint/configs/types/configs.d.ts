@@ -3,6 +3,7 @@ export type TConfig = {
     rules?: Linter.Config<Linter.RulesRecord>['rules'];
     plugins?: Linter.Config<Linter.RulesRecord>['plugins'];
     settings?: Linter.Config<Linter.RulesRecord>['settings'];
+    languageOptions?: Linter.Config<Linter.RulesRecord>['languageOptions'];
 };
 
 export type TIgnores = Linter.Config<Linter.RulesRecord>['ignores'];

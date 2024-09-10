@@ -31,6 +31,7 @@ const react = tseslint.config(
             ...tseslint.configs.stylisticTypeChecked,
         ],
         languageOptions: {
+            ...reactConfig.languageOptions,
             ecmaVersion: 'latest',
             sourceType: 'module',
             globals: {
@@ -42,15 +43,19 @@ const react = tseslint.config(
                 JSX: true,
             },
             parserOptions: {
+                warnOnUnsupportedTypeScriptVersion: false,
+                projectService: true,
+                ecmaFeatures: {
+                    jsx: true,
+                },
                 cacheLifetime: {
                     glob: 'Infinity',
                 },
-                warnOnUnsupportedTypeScriptVersion: false,
-                projectService: true,
             },
         },
         settings: {
             ...perfectionistConfig.settings,
+            ...reactConfig.settings,
         },
         rules: {
             ...reactConfig.rules,
