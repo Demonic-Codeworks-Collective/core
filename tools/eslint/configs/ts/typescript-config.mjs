@@ -1,7 +1,7 @@
 import { plugin as typescriptPlugin } from 'typescript-eslint';
 
 /**
- * @type { import('../types/configs').TConfig }
+ * @type { import('eslint').Linter.Config }
  */
 const typescriptConfig = {
     plugins: {

@@ -2,7 +2,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import react from 'eslint-plugin-react';
 /**
- * @type { import('../types/configs').TConfig }
+ * @type { import('eslint').Linter.Config }
  */
 const reactConfig = {
     plugins: {
@@ -26,6 +26,7 @@ const reactConfig = {
             'error',
             { when: 'always', children: true },
         ],
+        '@react/button-has-type': 'error',
         '@react/display-name': 'error',
         '@react/jsx-key': 'error',
         '@react/jsx-no-comment-textnodes': 'error',

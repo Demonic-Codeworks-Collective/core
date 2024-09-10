@@ -5,7 +5,7 @@ const type = {
 };
 
 /**
- * @type { import('../types/configs').TConfig }
+ * @type { import('eslint').Linter.Config }
  */
 const perfectionistConfig = {
     plugins: {

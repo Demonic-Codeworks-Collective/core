@@ -716,6 +716,6 @@
 
 // export { eslint };
 
-import { react } from './index.mjs';
+// import { react } from './index.mjs';
 
-export default react;
+// export default react;

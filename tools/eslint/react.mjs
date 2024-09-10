@@ -1,5 +1,7 @@
 import tseslint from 'typescript-eslint';
 import js from '@eslint/js';
+import eslintPrettierPlugin from 'eslint-plugin-prettier';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import { reactConfig } from './configs/react/react-config.mjs';
 import { perfectionistConfig } from './configs/perfectionist/perfectionist-config.mjs';
 import { typescriptConfig } from './configs/ts/typescript-config.mjs';
@@ -10,6 +12,7 @@ import globals from 'globals';
 const react = tseslint.config(
     {
         plugins: {
+            ['@prettier']: eslintPrettierPlugin,
             ...typescriptConfig.plugins,
             ...reactConfig.plugins,
             ...perfectionistConfig.plugins,
@@ -58,6 +61,7 @@ const react = tseslint.config(
             ...reactConfig.settings,
         },
         rules: {
+            '@prettier/prettier': 'error',
             ...reactConfig.rules,
             ...perfectionistConfig.rules,
         },
@@ -66,6 +70,7 @@ const react = tseslint.config(
         files: ['**/*.js'],
         extends: [tseslint.configs.disableTypeChecked],
     },
+    eslintConfigPrettier,
 );
 
 export default react;
