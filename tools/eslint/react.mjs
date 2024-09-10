@@ -12,10 +12,10 @@ import globals from 'globals';
 const react = tseslint.config(
     {
         plugins: {
-            ['@prettier']: eslintPrettierPlugin,
             ...typescriptConfig.plugins,
             ...reactConfig.plugins,
             ...perfectionistConfig.plugins,
+            ['@prettier']: eslintPrettierPlugin,
         },
     },
     {
@@ -61,9 +61,9 @@ const react = tseslint.config(
             ...reactConfig.settings,
         },
         rules: {
-            '@prettier/prettier': 'error',
             ...reactConfig.rules,
             ...perfectionistConfig.rules,
+            '@prettier/prettier': 'error',
         },
     },
     {
