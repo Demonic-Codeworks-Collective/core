@@ -1,6 +1,6 @@
 {
     "name": "@demonicattack/tsconfig",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "tsconfig config",
     "keywords": [
         "tsconfig"
@@ -19,14 +19,18 @@
     },
     "type": "module",
     "files": [
-        "base.json"
+        "base.json",
+        "nextjs.json",
+        "react.json"
     ],
     "scripts": {
         "clean": "rm -rf .turbo node_modules",
         "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\""
     },
     "lint-staged": {
-        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": "prettier --write"
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
+            "prettier --write"
+        ]
     },
     "devDependencies": {
         "@demonicattack/prettier": "workspace:*"

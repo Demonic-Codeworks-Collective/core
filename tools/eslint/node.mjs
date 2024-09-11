@@ -15,7 +15,7 @@ import { regexp } from './configs/regexp.mjs';
 import { unicorn } from './configs/unicorn.mjs';
 
 /**
- * @type {import('eslint').Linter.Config[]}
+ * @type {import('eslint').Linter.Config}
  */
 const node = [
     {

@@ -2,6 +2,23 @@
  * @type {import('prettier').Options}
  */
 const prettier = {
+    semi: true,
+    tabWidth: 4,
+    useTabs: false,
+    printWidth: 120,
+    endOfLine: 'lf',
+    singleQuote: true,
+    proseWrap: 'always',
+    jsxSingleQuote: true,
+    bracketSpacing: true,
+    trailingComma: 'all',
+    arrowParens: 'avoid',
+    bracketSameLine: false,
+    quoteProps: 'as-needed',
+    experimentalTernaries: true,
+    multilineArraysWrapThreshold: 1,
+    htmlWhitespaceSensitivity: 'css',
+    embeddedLanguageFormatting: 'auto',
     plugins: [
         'prettier-plugin-multiline-arrays',
         'prettier-plugin-tailwindcss',
@@ -9,23 +26,6 @@ const prettier = {
         'prettier-plugin-sort-json',
         'prettier-plugin-prisma',
     ],
-    htmlWhitespaceSensitivity: 'css',
-    embeddedLanguageFormatting: 'auto',
-    multilineArraysWrapThreshold: 1,
-    experimentalTernaries: true,
-    bracketSameLine: false,
-    jsxSingleQuote: true,
-    bracketSpacing: true,
-    trailingComma: 'all',
-    arrowParens: 'avoid',
-    singleQuote: true,
-    quoteProps: 'as-needed',
-    printWidth: 120,
-    endOfLine: 'lf',
-    proseWrap: 'always',
-    tabWidth: 4,
-    useTabs: false,
-    semi: true,
 };
 
 export { prettier };

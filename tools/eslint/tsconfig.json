@@ -2,5 +2,5 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "exclude": ["node_modules"],
     "extends": ["@demonicattack/tsconfig/base.json"],
-    "include": ["*"]
+    "include": ["."]
 }

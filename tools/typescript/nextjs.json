@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "allowJs": true,
+        "declaration": false,
+        "declarationMap": false,
+        "incremental": true,
+        "jsx": "preserve",
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "module": "ESNext",
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "strict": false,
+        "target": "ESNext",
+        "noUncheckedIndexedAccess": true,
+        "moduleResolution": "bundler",
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "display": "Next.js",
+    "exclude": ["node_modules"],
+    "extends": "./base.json",
+    "include": ["src", "next-env.d.ts"]
+}

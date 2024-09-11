@@ -35,12 +35,18 @@
         "typecheck": "turbo typecheck"
     },
     "lint-staged": {
-        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": "prettier --write"
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
+            "prettier --write"
+        ],
+        "*.{js,mjs,cjs}": [
+            "eslint --fix"
+        ]
     },
     "prettier": "./prettier.config.mjs",
     "devDependencies": {
         "@changesets/cli": "^2.27.8",
         "@demonicattack/prettier": "workspace:*",
+        "eslint": "^9.10.0",
         "husky": "9.1.5",
         "lint-staged": "15.2.10",
         "prettier": "3.3.3",
