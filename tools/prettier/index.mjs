@@ -13,7 +13,6 @@ const prettier = {
     embeddedLanguageFormatting: 'auto',
     multilineArraysWrapThreshold: 1,
     experimentalTernaries: true,
-    jsxBracketSameLine: false,
     bracketSameLine: false,
     jsxSingleQuote: true,
     bracketSpacing: true,
