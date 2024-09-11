@@ -1,0 +1,151 @@
+import eslintJsPlugin from '@eslint/js';
+const js = {
+    plugins: {
+        '@js': eslintJsPlugin,
+    },
+    rules: {
+        ...eslintJsPlugin.configs.recommended.rules,
+        yoda: 'error',
+        eqeqeq: 'error',
+        'no-new': 'error',
+        'no-var': 'error',
+        'no-eval': 'error',
+        'no-alert': 'error',
+        'no-proto': 'error',
+        'no-caller': 'error',
+        'no-labels': 'error',
+        'new-parens': 'error',
+        'no-bitwise': 'error',
+        'no-console': 'error',
+        'no-iterator': 'error',
+        'no-new-func': 'error',
+        'no-sequences': 'error',
+        'no-lonely-if': 'error',
+        'no-label-var': 'error',
+        'no-else-return': 'warn',
+        'no-extra-bind': 'error',
+        'no-script-url': 'error',
+        'no-undef-init': 'error',
+        'prefer-spread': 'error',
+        'no-extra-label': 'error',
+        'no-lone-blocks': 'error',
+        'no-implied-eval': 'error',
+        'no-new-wrappers': 'error',
+        'no-octal-escape': 'error',
+        'no-self-compare': 'error',
+        'no-useless-call': 'error',
+        'no-multi-assign': 'error',
+        'prefer-template': 'error',
+        'block-scoped-var': 'error',
+        'no-extend-native': 'error',
+        'no-return-assign': 'error',
+        'default-case-last': 'error',
+        'no-param-reassign': 'error',
+        'no-useless-concat': 'error',
+        'no-useless-return': 'error',
+        'no-nested-ternary': 'error',
+        'no-useless-rename': 'error',
+        'prefer-rest-params': 'error',
+        'symbol-description': 'error',
+        'no-floating-decimal': 'error',
+        'no-unneeded-ternary': 'error',
+        'no-unreachable-loop': 'error',
+        'no-implicit-coercion': 'error',
+        'no-array-constructor': 'error',
+        'prefer-object-spread': 'error',
+        'no-constructor-return': 'error',
+        'prefer-regex-literals': 'error',
+        'grouped-accessor-pairs': 'error',
+        'no-useless-computed-key': 'error',
+        'prefer-numeric-literals': 'error',
+        'prefer-named-capture-group': 'error',
+        'no-promise-executor-return': 'error',
+        'no-template-curly-in-string': 'error',
+        'no-constant-binary-expression': 'error',
+        curly: [
+            'error',
+            'multi-line',
+        ],
+        'func-names': [
+            'error',
+            'as-needed',
+        ],
+        'new-cap': [
+            'error',
+            { capIsNew: false },
+        ],
+        'array-callback-return': [
+            'error',
+            { allowImplicit: true },
+        ],
+        'prefer-promise-reject-errors': [
+            'error',
+            { allowEmptyReject: true },
+        ],
+        'no-restricted-exports': [
+            'error',
+            {
+                restrictedNamedExports: ['then'],
+            },
+        ],
+        'arrow-body-style': [
+            'error',
+            'as-needed',
+            {
+                requireReturnForObjectLiteral: false,
+            },
+        ],
+        'prefer-const': [
+            'error',
+            {
+                destructuring: 'all',
+                ignoreReadBeforeAssign: true,
+            },
+        ],
+        camelcase: [
+            'error',
+            {
+                allow: ['^UNSAFE_'],
+                properties: 'never',
+                ignoreDestructuring: false,
+            },
+        ],
+        'object-shorthand': [
+            'error',
+            'always',
+            {
+                avoidQuotes: true,
+                ignoreConstructors: false,
+                avoidExplicitReturnArrows: true,
+            },
+        ],
+        'no-unused-vars': [
+            'error',
+            {
+                vars: 'all',
+                args: 'after-used',
+                argsIgnorePattern: '^_',
+                varsIgnorePattern: '^_',
+                ignoreRestSiblings: false,
+            },
+        ],
+        'prefer-destructuring': [
+            'error',
+            {
+                VariableDeclarator: {
+                    array: false,
+                    object: true,
+                },
+                AssignmentExpression: {
+                    array: false,
+                    object: false,
+                },
+            },
+            {
+                enforceForRenamedProperties: false,
+            },
+        ],
+    },
+};
+
+export { js };

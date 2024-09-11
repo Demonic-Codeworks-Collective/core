@@ -1,5 +1,5 @@
-import { Config } from 'typescript-eslint';
+import type { Linter } from 'eslint';
+import type { Config } from 'typescript-eslint';
 
-export type EslintOptions = Config;
-
-export const react: EslintOptions;
+export const node: Linter.Config[];
+export const react: Config;
