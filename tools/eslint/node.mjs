@@ -5,6 +5,7 @@ import tseslint from 'typescript-eslint';
 
 import { comments } from './configs/comments.mjs';
 import { ECMA_VERSION, EXCLUDE_PATTERNS, JAVASCRIPT_FILES } from './configs/constants.mjs';
+import { eslint } from './configs/eslint.mjs';
 import { imrt } from './configs/import.mjs';
 import { js } from './configs/js.mjs';
 import { noComments } from './configs/no-comments.mjs';
@@ -28,6 +29,7 @@ const node = [
             ...unicorn.plugins,
             ...regexp.plugins,
             ...promise.plugins,
+            ...eslint.plugins,
         },
     },
     {
@@ -64,6 +66,7 @@ const node = [
             ...unicorn.rules,
             ...regexp.rules,
             ...promise.rules,
+            ...eslint.rules,
         },
     },
     eslintConfigPrettier,

@@ -21,8 +21,10 @@
     "main": "index.mjs",
     "types": "index.d.ts",
     "files": [
-        "index.d.ts",
+        "node.mjs",
         "react.mjs",
+        "next.mjs",
+        "index.d.ts",
         "configs"
     ],
     "scripts": {
@@ -31,7 +33,10 @@
         "lint": "eslint"
     },
     "lint-staged": {
-        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": "prettier --write"
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
+            "prettier --write",
+            "eslint --fix"
+        ]
     },
     "dependencies": {
         "@eslint/compat": "^1.1.1",

@@ -1,3 +1,3 @@
-import { next } from './index.mjs';
+import { node } from './index.mjs';
 
-export default next;
+export default node;
