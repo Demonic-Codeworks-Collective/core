@@ -23,7 +23,6 @@ import { unicorn } from './configs/unicorn.mjs';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const compat = new FlatCompat({ baseDirectory: __dirname });
-
 const nxt = tseslint.config(
     {
         plugins: {
@@ -54,6 +53,8 @@ const nxt = tseslint.config(
             ...TYPESCRIPT_FILES,
         ],
     },
+    ...compat.config(eslintNextPlugin.configs.recommended),
+    ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
     {
         settings: {
             ...perfectionist.settings,
@@ -61,6 +62,15 @@ const nxt = tseslint.config(
             ...imrt.settings.react,
             ...imrt.settings.ts,
         },
+        extends: [
+            eslintJsPlugin.configs.recommended,
+            tseslint.configs.eslintRecommended,
+            ...tseslint.configs.recommended,
+            ...tseslint.configs.recommendedTypeChecked,
+            ...tseslint.configs.strictTypeChecked,
+            ...tseslint.configs.stylisticTypeChecked,
+        ],
+
         rules: {
             '@prettier/prettier': 'error',
             ...js.rules,
@@ -76,16 +86,6 @@ const nxt = tseslint.config(
             ...jsxA11y.rules,
             ...tailwind.rules,
         },
-        extends: [
-            eslintJsPlugin.configs.recommended,
-            tseslint.configs.eslintRecommended,
-            ...compat.config(eslintNextPlugin.configs.recommended),
-            ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
-            ...tseslint.configs.recommended,
-            ...tseslint.configs.recommendedTypeChecked,
-            ...tseslint.configs.strictTypeChecked,
-            ...tseslint.configs.stylisticTypeChecked,
-        ],
         languageOptions: {
             ...react.languageOptions,
             ...jsxA11y.languageOptions,
