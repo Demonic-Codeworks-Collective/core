@@ -104,6 +104,15 @@ const rct = tseslint.config(
         },
     },
     {
+        files: [
+            '**/*.d.ts',
+        ],
+        rules: {
+            '@unicorn/prevent-abbreviations': 'off',
+            '@no-commented-code/no-commented-code': 'off',
+        },
+    },
+    {
         extends: [tseslint.configs.disableTypeChecked],
         files: [
             ...JAVASCRIPT_FILES,
