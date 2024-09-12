@@ -1,7 +1,6 @@
+import { fixupConfigRules } from '@eslint/compat';
 import { FlatCompat } from '@eslint/eslintrc';
 import eslintJsPlugin from '@eslint/js';
-// import { fixupConfigRules } from "@eslint/compat";
-import eslintNextPlugin from '@next/eslint-plugin-next';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPrettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
@@ -25,9 +24,12 @@ import { unicorn } from './configs/unicorn.mjs';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const compat = new FlatCompat({ baseDirectory: __dirname });
 const nxt = tseslint.config(
+    ...fixupConfigRules([
+        ...compat.extends('plugin:@next/next/recommended'),
+        ...compat.extends('plugin:@next/next/core-web-vitals'),
+    ]),
     {
         plugins: {
-            '@next/next': eslintNextPlugin,
             '@prettier': eslintPrettierPlugin,
             ...js.plugins,
             ...ts.plugins,
@@ -64,9 +66,6 @@ const nxt = tseslint.config(
         extends: [
             eslintJsPlugin.configs.recommended,
             tseslint.configs.eslintRecommended,
-            // eslintNextPlugin.configs['core-web-vitals'].,
-            // ...compat.config(eslintNextPlugin.configs.recommended),
-            // ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
             ...tseslint.configs.recommended,
             ...tseslint.configs.recommendedTypeChecked,
             ...tseslint.configs.strictTypeChecked,
@@ -86,8 +85,6 @@ const nxt = tseslint.config(
             ...react.rules,
             ...jsxA11y.rules,
             ...tailwind.rules,
-            // ...eslintNextPlugin.configs.recommended.rules,
-            // ...eslintNextPlugin.configs['core-web-vitals'].rules,
         },
         languageOptions: {
             ...react.languageOptions,
@@ -114,8 +111,6 @@ const nxt = tseslint.config(
             },
         },
     },
-    ...compat.config(eslintNextPlugin.configs.recommended),
-    ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
     {
         rules: {
             '@import/no-default-export': 'off',
@@ -148,6 +143,7 @@ const nxt = tseslint.config(
             '@typescript-eslint/explicit-function-return-type': 'off',
         },
     },
+
     eslintConfigPrettier,
 );
 
