@@ -61,6 +61,17 @@ const nxt = tseslint.config(
             ...imrt.settings.react,
             ...imrt.settings.ts,
         },
+        extends: [
+            eslintJsPlugin.configs.recommended,
+            tseslint.configs.eslintRecommended,
+            // eslintNextPlugin.configs['core-web-vitals'].,
+            // ...compat.config(eslintNextPlugin.configs.recommended),
+            // ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
+            ...tseslint.configs.recommended,
+            ...tseslint.configs.recommendedTypeChecked,
+            ...tseslint.configs.strictTypeChecked,
+            ...tseslint.configs.stylisticTypeChecked,
+        ],
         rules: {
             '@prettier/prettier': 'error',
             ...js.rules,
@@ -78,18 +89,6 @@ const nxt = tseslint.config(
             // ...eslintNextPlugin.configs.recommended.rules,
             // ...eslintNextPlugin.configs['core-web-vitals'].rules,
         },
-        extends: [
-            eslintJsPlugin.configs.recommended,
-            tseslint.configs.eslintRecommended,
-            // eslintNextPlugin.configs['core-web-vitals'].,
-            // ...compat.config(eslintNextPlugin.configs.recommended),
-            // ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
-            ...compat.extends('plugin:@next/next/recommended'),
-            ...tseslint.configs.recommended,
-            ...tseslint.configs.recommendedTypeChecked,
-            ...tseslint.configs.strictTypeChecked,
-            ...tseslint.configs.stylisticTypeChecked,
-        ],
         languageOptions: {
             ...react.languageOptions,
             ...jsxA11y.languageOptions,
@@ -115,6 +114,8 @@ const nxt = tseslint.config(
             },
         },
     },
+    ...compat.config(eslintNextPlugin.configs.recommended),
+    ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
     {
         rules: {
             '@import/no-default-export': 'off',
