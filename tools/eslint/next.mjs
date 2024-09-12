@@ -1,10 +1,10 @@
-import { FlatCompat } from '@eslint/eslintrc';
+// import { FlatCompat } from '@eslint/eslintrc';
 import eslintJsPlugin from '@eslint/js';
 import eslintNextPlugin from '@next/eslint-plugin-next';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPrettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
-import { fileURLToPath } from 'node:url';
+// import { fileURLToPath } from 'node:url';
 import tseslint from 'typescript-eslint';
 
 import { comments } from './configs/comments.mjs';
@@ -21,8 +21,8 @@ import { tailwind } from './configs/tailwind.mjs';
 import { ts } from './configs/ts.mjs';
 import { unicorn } from './configs/unicorn.mjs';
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url));
-const compat = new FlatCompat({ baseDirectory: __dirname });
+// const __dirname = fileURLToPath(new URL('.', import.meta.url));
+// const compat = new FlatCompat({ baseDirectory: __dirname });
 const nxt = tseslint.config(
     {
         plugins: {
@@ -53,8 +53,6 @@ const nxt = tseslint.config(
             ...TYPESCRIPT_FILES,
         ],
     },
-    ...compat.config(eslintNextPlugin.configs.recommended),
-    ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
     {
         settings: {
             ...perfectionist.settings,
@@ -85,6 +83,8 @@ const nxt = tseslint.config(
             ...react.rules,
             ...jsxA11y.rules,
             ...tailwind.rules,
+            ...eslintNextPlugin.configs.recommended.rules,
+            ...eslintNextPlugin.configs['core-web-vitals'].rules,
         },
         languageOptions: {
             ...react.languageOptions,
