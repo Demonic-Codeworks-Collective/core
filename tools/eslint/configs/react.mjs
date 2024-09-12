@@ -42,10 +42,6 @@ const react = {
         '@react/no-danger-with-children': 'error',
         '@react/jsx-no-comment-textnodes': 'error',
         '@react/no-direct-mutation-state': 'error',
-        '@react/jsx-curly-spacing': [
-            'error',
-            { when: 'always', children: true },
-        ],
         '@react-refresh/only-export-components': [
             'warn',
             { allowConstantExport: true },

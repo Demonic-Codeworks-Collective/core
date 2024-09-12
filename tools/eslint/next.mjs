@@ -115,6 +115,7 @@ const nxt = tseslint.config(
         rules: {
             '@import/no-default-export': 'off',
             '@react/react-in-jsx-scope': 'off',
+            '@react-refresh/only-export-components': 'off',
         },
         files: [
             'src/app/**/{page,layout,not-found,error,loading}.tsx',
@@ -122,7 +123,17 @@ const nxt = tseslint.config(
             'app/**/{page,layout,not-found,error,loading}.tsx',
             'app/{sitemap,robots}.ts',
             'middleware.ts',
+            'next-env.d.ts',
         ],
+    },
+    {
+        files: [
+            'next-env.d.ts',
+        ],
+        rules: {
+            '@unicorn/prevent-abbreviations': 'off',
+            '@no-commented-code/no-commented-code': 'off',
+        },
     },
     {
         extends: [tseslint.configs.disableTypeChecked],
