@@ -1,7 +1,10 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import eslintJsPlugin from '@eslint/js';
+import eslintNextPlugin from '@next/eslint-plugin-next';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPrettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
+import { fileURLToPath } from 'node:url';
 import tseslint from 'typescript-eslint';
 
 import { comments } from './configs/comments.mjs';
@@ -9,7 +12,6 @@ import { ECMA_VERSION, EXCLUDE_PATTERNS, JAVASCRIPT_FILES, TYPESCRIPT_FILES } fr
 import { imrt } from './configs/import.mjs';
 import { js } from './configs/js.mjs';
 import { jsxA11y } from './configs/jsx-a11y.mjs';
-import { next } from './configs/next.mjs';
 import { noComments } from './configs/no-comments.mjs';
 import { perfectionist } from './configs/perfectionist.mjs';
 import { promise } from './configs/promise.mjs';
@@ -19,9 +21,13 @@ import { tailwind } from './configs/tailwind.mjs';
 import { ts } from './configs/ts.mjs';
 import { unicorn } from './configs/unicorn.mjs';
 
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
+const compat = new FlatCompat({ baseDirectory: __dirname });
+
 const nxt = tseslint.config(
     {
         plugins: {
+            '@next/next': eslintNextPlugin,
             '@prettier': eslintPrettierPlugin,
             ...js.plugins,
             ...ts.plugins,
@@ -34,7 +40,6 @@ const nxt = tseslint.config(
             ...regexp.plugins,
             ...promise.plugins,
             ...jsxA11y.plugins,
-            ...next.plugins,
             ...tailwind.plugins,
         },
     },
@@ -56,15 +61,6 @@ const nxt = tseslint.config(
             ...imrt.settings.react,
             ...imrt.settings.ts,
         },
-        extends: [
-            eslintJsPlugin.configs.recommended,
-            tseslint.configs.eslintRecommended,
-            next.extends,
-            ...tseslint.configs.recommended,
-            ...tseslint.configs.recommendedTypeChecked,
-            ...tseslint.configs.strictTypeChecked,
-            ...tseslint.configs.stylisticTypeChecked,
-        ],
         rules: {
             '@prettier/prettier': 'error',
             ...js.rules,
@@ -78,13 +74,21 @@ const nxt = tseslint.config(
             ...promise.rules,
             ...react.rules,
             ...jsxA11y.rules,
-            ...next.rules,
             ...tailwind.rules,
         },
+        extends: [
+            eslintJsPlugin.configs.recommended,
+            tseslint.configs.eslintRecommended,
+            ...compat.config(eslintNextPlugin.configs.recommended),
+            ...compat.config(eslintNextPlugin.configs['core-web-vitals']),
+            ...tseslint.configs.recommended,
+            ...tseslint.configs.recommendedTypeChecked,
+            ...tseslint.configs.strictTypeChecked,
+            ...tseslint.configs.stylisticTypeChecked,
+        ],
         languageOptions: {
             ...react.languageOptions,
             ...jsxA11y.languageOptions,
-            ...tailwind.languageOptions,
             sourceType: 'module',
             ecmaVersion: ECMA_VERSION,
             globals: {
@@ -125,6 +129,9 @@ const nxt = tseslint.config(
         files: [
             ...JAVASCRIPT_FILES,
         ],
+        rules: {
+            '@typescript-eslint/explicit-function-return-type': 'off',
+        },
     },
     eslintConfigPrettier,
 );
