@@ -14,6 +14,7 @@ import { js } from './configs/js.mjs';
 import { jsxA11y } from './configs/jsx-a11y.mjs';
 import { noComments } from './configs/no-comments.mjs';
 import { perfectionist } from './configs/perfectionist.mjs';
+import { preferArrowFunctions } from './configs/prefer-arrow-functions.mjs';
 import { promise } from './configs/promise.mjs';
 import { react } from './configs/react.mjs';
 import { regexp } from './configs/regexp.mjs';
@@ -43,6 +44,7 @@ const nxt = tseslint.config(
             ...promise.plugins,
             ...jsxA11y.plugins,
             ...tailwind.plugins,
+            ...preferArrowFunctions.plugins,
         },
     },
     {
@@ -85,6 +87,7 @@ const nxt = tseslint.config(
             ...react.rules,
             ...jsxA11y.rules,
             ...tailwind.rules,
+            ...preferArrowFunctions.rules,
         },
         languageOptions: {
             ...react.languageOptions,

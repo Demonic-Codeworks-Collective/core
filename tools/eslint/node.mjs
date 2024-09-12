@@ -10,6 +10,7 @@ import { imrt } from './configs/import.mjs';
 import { js } from './configs/js.mjs';
 import { noComments } from './configs/no-comments.mjs';
 import { perfectionist } from './configs/perfectionist.mjs';
+import { preferArrowFunctions } from './configs/prefer-arrow-functions.mjs';
 import { promise } from './configs/promise.mjs';
 import { regexp } from './configs/regexp.mjs';
 import { unicorn } from './configs/unicorn.mjs';
@@ -30,6 +31,7 @@ const node = [
             ...regexp.plugins,
             ...promise.plugins,
             ...eslint.plugins,
+            ...preferArrowFunctions.plugins,
         },
     },
     {
@@ -67,6 +69,7 @@ const node = [
             ...regexp.rules,
             ...promise.rules,
             ...eslint.rules,
+            ...preferArrowFunctions.rules,
         },
     },
     eslintConfigPrettier,

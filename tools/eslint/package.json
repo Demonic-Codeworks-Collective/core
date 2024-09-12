@@ -1,6 +1,6 @@
 {
     "name": "@demonicattack/eslint",
-    "version": "0.0.34",
+    "version": "0.0.35",
     "description": "eslint config",
     "keywords": [
         "eslint"
@@ -53,6 +53,7 @@
         "eslint-plugin-jsx-a11y": "^6.10.0",
         "eslint-plugin-no-commented-code": "^1.0.10",
         "eslint-plugin-perfectionist": "^3.5.0",
+        "eslint-plugin-prefer-arrow-functions": "^3.4.1",
         "eslint-plugin-prettier": "^5.2.1",
         "eslint-plugin-promise": "^7.1.0",
         "eslint-plugin-react": "^7.35.2",
