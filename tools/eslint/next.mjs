@@ -15,6 +15,7 @@ import { perfectionist } from './configs/perfectionist.mjs';
 import { promise } from './configs/promise.mjs';
 import { react } from './configs/react.mjs';
 import { regexp } from './configs/regexp.mjs';
+import { tailwind } from './configs/tailwind.mjs';
 import { ts } from './configs/ts.mjs';
 import { unicorn } from './configs/unicorn.mjs';
 
@@ -34,6 +35,7 @@ const nxt = tseslint.config(
             ...promise.plugins,
             ...jsxA11y.plugins,
             ...next.plugins,
+            ...tailwind.plugins,
         },
     },
     {
@@ -57,6 +59,7 @@ const nxt = tseslint.config(
         extends: [
             eslintJsPlugin.configs.recommended,
             tseslint.configs.eslintRecommended,
+            next.extends,
             ...tseslint.configs.recommended,
             ...tseslint.configs.recommendedTypeChecked,
             ...tseslint.configs.strictTypeChecked,
@@ -76,10 +79,12 @@ const nxt = tseslint.config(
             ...react.rules,
             ...jsxA11y.rules,
             ...next.rules,
+            ...tailwind.rules,
         },
         languageOptions: {
             ...react.languageOptions,
             ...jsxA11y.languageOptions,
+            ...tailwind.languageOptions,
             sourceType: 'module',
             ecmaVersion: ECMA_VERSION,
             globals: {

@@ -4,6 +4,10 @@ const next = {
     plugins: {
         '@next/next': eslintNextPlugin,
     },
+    extends: {
+        ...eslintNextPlugin.configs.recommended,
+        ...eslintNextPlugin.configs['core-web-vitals'],
+    },
     rules: {
         ...eslintNextPlugin.configs.recommended.rules,
         ...eslintNextPlugin.configs['core-web-vitals'].rules,
