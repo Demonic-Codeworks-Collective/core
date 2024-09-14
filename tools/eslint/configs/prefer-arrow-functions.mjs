@@ -2,10 +2,10 @@ import eslintPreferArrowFunctionsPlugin from 'eslint-plugin-prefer-arrow-functio
 
 const preferArrowFunctions = {
     plugins: {
-        '@prefer-arrow-functions': eslintPreferArrowFunctionsPlugin,
+        'prefer-arrow-functions': eslintPreferArrowFunctionsPlugin,
     },
     rules: {
-        '@prefer-arrow-functions/prefer-arrow-functions': [
+        'prefer-arrow-functions/prefer-arrow-functions': [
             'error',
             {
                 singleReturnOnly: true,
