@@ -37,9 +37,6 @@
     "lint-staged": {
         "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
             "prettier --write"
-        ],
-        "*.{js,mjs,cjs}": [
-            "eslint --fix"
         ]
     },
     "prettier": "./prettier.config.mjs",

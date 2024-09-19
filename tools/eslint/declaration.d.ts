@@ -1,0 +1,11 @@
+declare module 'eslint-plugin-eslint-comments';
+declare module 'eslint-plugin-eslint-plugin';
+declare module 'eslint-plugin-import';
+declare module 'eslint-plugin-jsx-a11y';
+declare module 'eslint-plugin-no-commented-code';
+declare module 'eslint-plugin-prefer-arrow-functions';
+declare module 'eslint-plugin-promise';
+declare module 'eslint-plugin-react';
+declare module 'eslint-plugin-react-hooks';
+declare module 'eslint-plugin-react-refresh';
+declare module 'eslint-plugin-tailwindcss';

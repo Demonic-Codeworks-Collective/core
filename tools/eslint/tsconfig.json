@@ -1,6 +1,14 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "target": "ESNext",
+        "baseUrl": ".",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true
+    },
     "exclude": ["node_modules"],
-    "extends": ["@demonicattack/tsconfig/base.json"],
-    "include": ["."]
+    "include": ["**/*.ts"]
 }

@@ -1,0 +1,32 @@
+{
+    "name": "@demonicattack/typegen-cli",
+    "version": "0.0.1",
+    "description": "",
+    "keywords": [
+        "typegen-cli"
+    ],
+    "license": "MIT",
+    "author": "",
+    "type": "module",
+    "bin": {
+        "typegen-cli": "typegen-cli.js"
+    },
+    "files": [
+        "typegen-cli.js"
+    ],
+    "scripts": {
+        "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\""
+    },
+    "lint-staged": {
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
+            "prettier --write"
+        ]
+    },
+    "prettier": "./prettier.config.js",
+    "dependencies": {
+        "tsx": "^4.19.1"
+    },
+    "devDependencies": {
+        "@demonicattack/prettier": "workspace:*"
+    }
+}
