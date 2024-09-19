@@ -1,10 +1,16 @@
 import eslintTailwindPlugin from 'eslint-plugin-tailwindcss';
 
+import { addAtSymbolToRules } from './utils.mjs';
+
 const tailwind = {
     plugins: {
         '@tailwindcss': eslintTailwindPlugin,
     },
+    settings: {
+        ...eslintTailwindPlugin.configs['flat/recommended'].map(array => array.settings),
+    },
     rules: {
+        ...addAtSymbolToRules(eslintTailwindPlugin.configs['flat/recommended'].map(array => array.rules)),
         '@tailwindcss/classnames-order': 'warn',
         '@tailwindcss/no-arbitrary-value': 'off',
         '@tailwindcss/enforces-shorthand': 'warn',
