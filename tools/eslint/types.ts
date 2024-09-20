@@ -52,4 +52,6 @@ export interface OptionsUnoCSS extends OptionsOverrides {
     strict?: boolean;
 }
 
-export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType {}
+export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType {
+    overrides?: {};
+}

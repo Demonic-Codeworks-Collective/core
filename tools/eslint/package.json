@@ -28,11 +28,18 @@
         "configs"
     ],
     "scripts": {
+        "build:inspector": "pnpm build && npx @eslint/config-inspector build",
+        "build:ts": "pnpm run rimraf && tsc",
         "clean": "rm -rf .turbo node_modules",
+        "dev": "pnpm run build:ts && concurrently -k -p \"[{name}]\" -n \"TS,SERVER\" -c \"yellow.bold,cyan.bold\" \"pnpm:watch:ts\" \"pnpm:dev:start\"",
+        "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/bootstrap.js",
         "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\"",
         "lint": "eslint",
         "lint:fix": "eslint --fix",
-        "typegen": "typegen-cli scripts/typegen.ts"
+        "rimraf": "rimraf dist",
+        "typegen": "typegen-cli scripts/typegen.ts",
+        "watch": "tsup --format esm,cjs --watch",
+        "watch:ts": "tsc -w"
     },
     "lint-staged": {
         "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
@@ -42,8 +49,8 @@
     "dependencies": {
         "@eslint/compat": "^1.1.1",
         "@eslint/eslintrc": "^3.1.0",
-        "@eslint/js": "^9.10.0",
-        "@next/eslint-plugin-next": "^14.2.9",
+        "@eslint/js": "^10.0.0",
+        "@next/eslint-plugin-next": "^14.2.13",
         "@types/eslint": "^9.6.1",
         "@types/eslint__js": "^8.42.3",
         "@types/node": "^22.5.5",
@@ -56,13 +63,13 @@
         "eslint-plugin-import": "^2.30.0",
         "eslint-plugin-jsx-a11y": "^6.10.0",
         "eslint-plugin-no-commented-code": "^1.0.10",
-        "eslint-plugin-perfectionist": "^3.5.0",
+        "eslint-plugin-perfectionist": "^3.6.0",
         "eslint-plugin-prefer-arrow-functions": "^3.4.1",
         "eslint-plugin-prettier": "^5.2.1",
         "eslint-plugin-promise": "^7.1.0",
-        "eslint-plugin-react": "^7.35.2",
+        "eslint-plugin-react": "^7.36.1",
         "eslint-plugin-react-hooks": "^5.1.0-rc-fb9a90fa48-20240614",
-        "eslint-plugin-react-refresh": "^0.4.11",
+        "eslint-plugin-react-refresh": "^0.4.12",
         "eslint-plugin-regexp": "^2.6.0",
         "eslint-plugin-simple-import-sort": "^12.1.1",
         "eslint-plugin-tailwindcss": "^3.17.4",
@@ -70,12 +77,14 @@
         "eslint-typegen": "^0.3.2",
         "esno": "^4.7.0",
         "globals": "^15.9.0",
-        "typescript-eslint": "^8.5.0"
+        "typescript-eslint": "^8.6.0"
     },
     "devDependencies": {
         "@demonicattack/prettier": "workspace:*",
         "@demonicattack/tsconfig": "workspace:*",
         "@demonicattack/typegen-cli": "workspace:*",
+        "concurrently": "^9.0.1",
+        "rimraf": "^6.0.1",
         "typescript": "^5.6.2"
     },
     "peerDependencies": {

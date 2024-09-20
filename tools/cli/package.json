@@ -1,0 +1,49 @@
+{
+    "name": "@demonicattack/cli",
+    "version": "0.0.1",
+    "description": "",
+    "keywords": [],
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "exports": "./dist/cli.js",
+    "main": "dist/cli.js",
+    "types": "dist/cli.d.ts",
+    "bin": "dist/cli.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "pnpm run clean && tsup",
+        "build:ts": "pnpm run clean && tsc",
+        "clean": "rimraf dist",
+        "dev": "pnpm run build:ts && concurrently -k -p \"[{name}]\" -n \"TS,CLI\" -c \"yellow.bold,cyan.bold\" \"pnpm:watch:ts\" \"pnpm:dev:start\"",
+        "dev:start": "node dist/cli.js",
+        "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\"",
+        "start": "node dist/cli.js",
+        "tsup:dev": "tsup --watch",
+        "typecheck": "tsc --noEmit",
+        "watch:ts": "tsc -w"
+    },
+    "lint-staged": {
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
+            "prettier --write"
+        ]
+    },
+    "prettier": "./prettier.config.js",
+    "dependencies": {
+        "@clack/prompts": "^0.7.0",
+        "@types/node": "^22.5.5",
+        "picocolors": "^1.1.0",
+        "yargs": "^17.7.2"
+    },
+    "devDependencies": {
+        "@demonicattack/prettier": "workspace:*",
+        "@demonicattack/tsconfig": "workspace:*",
+        "@types/yargs": "^17.0.33",
+        "concurrently": "^9.0.1",
+        "rimraf": "^6.0.1",
+        "tsup": "^8.3.0",
+        "typescript": "^5.6.2"
+    }
+}

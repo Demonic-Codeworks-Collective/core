@@ -21,7 +21,8 @@
     "files": [
         "base.json",
         "nextjs.json",
-        "react.json"
+        "react.json",
+        "cli.json"
     ],
     "scripts": {
         "clean": "rm -rf .turbo node_modules",

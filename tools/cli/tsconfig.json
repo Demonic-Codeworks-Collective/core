@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "outDir": "dist",
+        "declarationMap": true,
+        "composite": true,
+        "baseUrl": "src",
+        "paths": {
+            "@lib": ["lib"],
+            "@utils": ["utils"],
+            "@stages": ["stages"]
+        }
+    },
+    "exclude": ["node_modules", "dist"],
+    "extends": ["@demonicattack/tsconfig/cli.json"],
+    "include": ["src/**/*.ts"]
+}

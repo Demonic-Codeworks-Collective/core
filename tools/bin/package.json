@@ -1,0 +1,28 @@
+{
+    "name": "@demonicattack/bin",
+    "version": "0.0.1",
+    "description": "",
+    "keywords": [],
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "main": "index.js",
+    "bin": {
+        "demonic-cli": "bin.js"
+    },
+    "scripts": {
+        "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\""
+    },
+    "lint-staged": {
+        "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
+            "prettier --write"
+        ]
+    },
+    "prettier": "./prettier.config.js",
+    "dependencies": {
+        "@demonicattack/cli": "workspace:*"
+    },
+    "devDependencies": {
+        "@demonicattack/cli": "workspace:*"
+    }
+}
