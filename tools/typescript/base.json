@@ -1,20 +1,25 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
-        "composite": false,
+        "removeComments": true,
+        "newLine": "lf",
+        "noUnusedLocals": true,
+        "noFallthroughCasesInSwitch": true,
+        "forceConsistentCasingInFileNames": true,
+        "target": "ESNext",
+        "module": "ESNext",
         "declaration": true,
         "declarationMap": true,
         "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "inlineSources": false,
+        "incremental": false,
         "isolatedModules": true,
-        "moduleResolution": "node",
-        "noUnusedLocals": false,
-        "noUnusedParameters": false,
-        "preserveWatchOutput": true,
+        "lib": ["ESNext"],
+        "moduleDetection": "force",
+        "moduleResolution": "Bundler",
+        "noUncheckedIndexedAccess": true,
+        "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true
     },
-    "display": "Default",
-    "exclude": ["node_modules"]
+    "display": "CLI"
 }

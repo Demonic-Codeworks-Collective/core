@@ -14,16 +14,15 @@
         "dist"
     ],
     "scripts": {
-        "build": "pnpm run clean && tsup",
-        "build:ts": "pnpm run clean && tsc",
+        "build:tsup": "pnpm run clean && tsup",
         "clean": "rimraf dist",
-        "dev": "pnpm run build:ts && concurrently -k -p \"[{name}]\" -n \"TS,CLI\" -c \"yellow.bold,cyan.bold\" \"pnpm:watch:ts\" \"pnpm:dev:start\"",
-        "dev:start": "node dist/cli.js",
+        "dev": "concurrently -k -p \"[{name}]\" -n \"BUILD,CLI\" -c \"yellow.bold,cyan.bold\"  \"pnpm run build:tsup\"  \"pnpm run start\"",
         "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}\"",
         "start": "node dist/cli.js",
         "tsup:dev": "tsup --watch",
         "typecheck": "tsc --noEmit",
-        "watch:ts": "tsc -w"
+        "watch:ts": "tsc -w",
+        "watch:tsup": "tsup --watch"
     },
     "lint-staged": {
         "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx,json,prisma,md}": [
@@ -34,6 +33,7 @@
     "dependencies": {
         "@clack/prompts": "^0.7.0",
         "@types/node": "^22.5.5",
+        "commander": "^12.1.0",
         "picocolors": "^1.1.0",
         "yargs": "^17.7.2"
     },
@@ -42,6 +42,7 @@
         "@demonicattack/tsconfig": "workspace:*",
         "@types/yargs": "^17.0.33",
         "concurrently": "^9.0.1",
+        "ora": "^8.1.0",
         "rimraf": "^6.0.1",
         "tsup": "^8.3.0",
         "typescript": "^5.6.2"

@@ -3,8 +3,7 @@ import * as p from '@clack/prompts';
 import c from 'picocolors';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
-
-import { pkgJson } from '@lib';
+import { pkgJson } from './constants';
 import { run } from './run';
 
 function header(): void {
@@ -20,27 +19,31 @@ const instance = yargs(hideBin(process.argv))
         'Run the initialization or migration',
         args =>
             args
-                .option('yes', {
-                    alias: 'y',
+                .option('skip', {
+                    alias: '--skip',
                     description: 'Skip prompts and use default values',
                     type: 'boolean',
                 })
                 .option('template', {
-                    alias: 't',
+                    alias: '--template',
                     description: 'Use the framework template for optimal customization: vue / react / svelte / astro',
                     type: 'string',
                 })
                 .option('extra', {
-                    alias: 'e',
+                    alias: '--extra',
                     array: true,
                     description: 'Use the extra utils: formatter / perfectionist / unocss',
                     type: 'string',
                 })
                 .help(),
-        async args => {
+        async ({ extra, template, yes }) => {
             header();
             try {
-                await run(args);
+                await run({
+                    skip: !!yes,
+                    extraOptions: extra,
+                    frameworks: template ? [template] : undefined,
+                });
             } catch (error) {
                 p.log.error(c.inverse(c.red(' Failed to migrate ')));
                 p.log.error(c.red(`✘ ${String(error)}`));
@@ -54,3 +57,26 @@ const instance = yargs(hideBin(process.argv))
     .alias('v', 'version');
 
 instance.help().argv;
+
+// import { example } from './commands/command';
+// import { Command } from 'commander';
+
+// import { version } from '../package.json';
+
+// function main() {
+//     try {
+//         const program = new Command()
+//             .name('cli')
+//             .description('A simple CLI template')
+//             .version(version || '0.0.0');
+
+//         program.addCommand(example);
+
+//         program.parse(process.argv);
+//     } catch (error) {
+//         console.error('Ошибка при выполнении CLI:', error);
+//         process.exit(1);
+//     }
+// }
+
+// main();
